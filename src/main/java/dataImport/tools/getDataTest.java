@@ -1,4 +1,4 @@
-package dataImport;
+package dataImport.tools;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

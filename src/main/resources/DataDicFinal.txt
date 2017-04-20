@@ -57,8 +57,8 @@ B6F  Escalation Factor - fixed
 B6P  Escalation Factor - provisional 
 M1F  Discount - fixed 
 M1P  Discount - provisional 
-MCF Miscellaneous Charge - fixed 
-MCP Miscellaneous Charge - provisional 
+MCF  Miscellaneous Charge - fixed 
+MCP  Miscellaneous Charge - provisional 
 RCF  Reimbursement Cost - fixed 
 RCP  Reimbursement Cost - provisional 
 U1F  Transport Charge - fixed 
@@ -329,7 +329,7 @@ A1  Arrestments
 CD  Calendar Days 
 CL  Cycles 
 CM  Calendar Months 
-CW Calendar Weeks 
+CW  Calendar Weeks 
 CY  Calendar Years 
 DL  Deck Landings 
 F1  Figures 
@@ -339,7 +339,7 @@ KM  Kilometers
 L1  Launches 
 LG  Landings 
 MI  Miles 
-MM Minutes 
+MM  Minutes 
 N1  Number of Rounds
 NM  Nautical Miles 
 OH  Operating Hours 
@@ -714,10 +714,10 @@ DESCRIPTION/PURPOSE
 Identifies the action to be taken on receipt of the data contained in the message. This data
 element is only applicable to the CODREQ-message as included in Chapter 1-3b.
 CODE(S)
-D deleted 
-N new 
-R revised 
-U unchanged
+D  deleted 
+N  new 
+R  revised 
+U  unchanged
 REMARK(S)
 N (New) This code will only be used for:
 - the addition of a new segment to previously transmitted Information,
@@ -914,8 +914,8 @@ DESCRIPTION/PURPOSE
 Identifies the codification time frame in calendar days.
 CODE(S)
 4  Routine, 60 calendar days
-A Accelerated, 45 calendar days
-E Emergency, 14 calendar days
+A  Accelerated, 45 calendar days
+E  Emergency, 14 calendar days
 REMARK(S)
 Codification Time Frames as per the procedures published in the NATO Manual on
 Codification (ACoD-P1).
@@ -963,8 +963,8 @@ DESCRIPTION/PURPOSE
 Indicates whether a Part Orientated Provisioning Project Update Message is a correction
 message or not.
 CODE(S)
-Y = Yes
-N = No
+Y  Yes
+N  No
 REMARK(S)
 --
 EXAMPLE(S)
@@ -1007,10 +1007,10 @@ DESCRIPTION/PURPOSE
 Identifies the action to be taken on receipt of the data contained in the message.
 CODE(S)
 I  Insert 
-D Delete 
-U Update 
-R Replace 
-N Non-changed
+D  Delete 
+U  Update 
+R  Replace 
+N  Non-changed
 REMARK(S)
 Insert = Insertion of a new record or of a new CSN/ISN
 Delete = Deletion of a record or of an existing CSN/ISN
@@ -1505,30 +1505,30 @@ War Weapons Control Act).
 CODE(S)
 A  Demilitarisation not required. 
 B  Demilitarisation not required. Trade Security Controls (TSC) required at disposal. 
-C Remove and/or demilitarize installed key point(s) as prescribed in national
+C  Remove and/or demilitarize installed key point(s) as prescribed in national
 demilitarisation manuals (see below), or lethal parts, components and accessories.
-D Demilitarize by mutilation (total destruction of item and components) by melting,
+D  Demilitarize by mutilation (total destruction of item and components) by melting,
 cutting, tearing, scratching, crushing, breaking punching, neutralizing, etc. (as an
 alternative, burial and deep-water dumping may be used when authorized by the
 DoD or national Demilitarisation Program Office).
 E  Demilitarisation to be furnished by the MoD or national Demilitarisation Program
 Office.
 F  Demilitarisation instructions to be furnished by item/technical manager. 
-G Demilitarisation required prior to transfer of item to national reutilization and
+G  Demilitarisation required prior to transfer of item to national reutilization and
 disposition offices. Code normally limited to ammunition, explosives and other
 dangerous articles.
 P  Security Classified Item - Declassification, and any other required demilitarisation,
 and removal of any sensitive markings or information, will be accomplished prior to
 accountability or physical transfer to a DRMO. This code will not be assigned to
 ammunition, explosive and dangerous (AEDA) articles.
-Q Demilitarisation not required. SLI are non-MLI and are identified and licensed by the
+Q  Demilitarisation not required. SLI are non-MLI and are identified and licensed by the
 U.S. Department of Commerce through the Export Administration Regulations
 (EAR), 15 CFR, and indicated on the Commerce Control List (CCL), Part 799.1.
 Each CCL entry is preceded by a 5-digit Export Control Classification Number
 (ECCN) and those ECCNs ending in the letter “A” or “B” are defined by DoD as SLI.
 These items are subject to Import Certification and Delivery Verification (IC/DV)
 control and other Trade Security Controls at disposition.
-R Demilitarisation in accordance with item specific instructions, e.g. Ammunition
+R  Demilitarisation in accordance with item specific instructions, e.g. Ammunition
 Orders, Technical Orders, Manuals, Publications.
 Y  Demilitarisation in accordance with special instructions for Crypto material. 
 REMARK(S)
@@ -2079,17 +2079,14 @@ DESCRIPTION/PURPOSE
 To identify a date or period relating to the economic conditions to which a price was
 calculated.
 CODE(S)
-1st Character:
-•  Use one of the following characters:
-o A = Average
-o D = Date
-o M = Month
-o P = Period
-2 nd to 13 th Character:
-•  When A: Enter the average period as: “YYYY”
-•  When D: Enter the date as: “YYYYMMDD”
-•  When M: Enter the month as: “YYYYMM”.
-•  When P: Enter the exact period as “YYYYMMYYYYMM”.
+A  Average  1st Character
+D  Date  1st Character
+M  Month  1st Character
+P  Period  1st Character
+When A  Enter the average period as: “YYYY”  2 nd to 13 th Character
+When D  Enter the date as: “YYYYMMDD”  2 nd to 13 th Character
+When M  Enter the month as: “YYYYMM”.  2 nd to 13 th Character
+When P  Enter the exact period as “YYYYMMYYYYMM”.  2 nd to 13 th Character
 REMARK(S)
 Prices carrying economic conditions earlier than the actual delivery date may be subject to
 escalation as per contractual agreements in order to reflect the economic conditions of the
@@ -2116,8 +2113,8 @@ The electromagnetic compatibility characterises the ability of electrical equipm
 satisfactorily in its electromagnetic environment without inadmissibly influencing this
 environment to which also other equipment belongs.
 CODE(S)
-N Item is not electromagnetic incompatible
-Y Item is electromagnetic incompatible
+N  Item is not electromagnetic incompatible
+Y  Item is electromagnetic incompatible
 REMARK(S)
 The electromagneticIncompatible indication will be provided only for items which have a
 figureItemReasonForSelection other than 0.
@@ -2139,8 +2136,8 @@ DESCRIPTION/PURPOSE
 Electromagnetic sensitivity is differentiated into categories of electric, magnetic,
 electromagnetic or radioactive affected sensitivity.
 CODE(S)
-N Item is not electromagnetic sensitive
-Y Item is electromagnetic sensitive
+N  Item is not electromagnetic sensitive
+Y  Item is electromagnetic sensitive
 REMARK(S)
 The electromagneticSensitive indication will be provided only for items which have
 figureItemReasonForSelection other than 0.
@@ -2248,8 +2245,8 @@ DESCRIPTION/PURPOSE
 To define the source and date of an EXCHANGE RATE.
 CODE(S)
 Codes to be contractually agreed.
-1 st character = Code
-2 nd – 9 th character = Date
+1  st character = Code
+2  nd – 9 th character = Date
 REMARK(S)
 This data element is used in conjunction with EXCHANGE RATE/CURRENCY CODE AND
 EXCHANGE CURRENCY CODE.
@@ -2274,9 +2271,9 @@ DESCRIPTION/PURPOSE
 Indicates whether a part is essential to the operation of a Product, e.g., Weapon System,
 Aircraft, Engine, Ship or other like Product.
 CODE(S)
-1 Product cannot be operated with the part unserviceable
-2 Product can sometimes be operated with the part unserviceable
-3 Product can always be operated with the part unserviceable
+1  Product cannot be operated with the part unserviceable
+2  Product can sometimes be operated with the part unserviceable
+3  Product can always be operated with the part unserviceable
 REMARK(S)
 This data element is to be used for spares provisioning only.
 The use and application of this data element is to be agreed at the beginning of the Project.
@@ -2301,8 +2298,8 @@ The electrostatic sensitive device property identifies electronic components sub
 catastrophic failure, major characteristic change or performance degradation from the effect
 of electrostatic fields.
 CODE(S)
-N Item is not electrostatic sensitive
-Y Item is electrostatic sensitive
+N  Item is not electrostatic sensitive
+Y  Item is electrostatic sensitive
 REMARK(S)
 The electrostaticSensitive indication will be provided only for items which have a
 figureItemReasonForSelection other than 0.
@@ -2424,8 +2421,8 @@ DESCRIPTION/PURPOSE
 Identifies whether the data relates to a chapterized or non-chapterized IP project contained
 in the message.
 CODE(S)
-S = chapterized Presentation
-T = non-chapterized Presentation
+S  chapterized Presentation
+T  non-chapterized Presentation
 REMARK(S)
 --
 EXAMPLE(S)
@@ -2698,19 +2695,19 @@ Two types of ICN are available:
 (a) ICN – CAGE CODE based
 (b)  ICN – Model Identification based.
 CODE(S)
-ICN – CAGE CODE based:
-Positions one to five - Originator (Commercial and Government Entity Code) (alphanumeric)
-Positions six to ten – Originator’s Information Unique Identifier (alphanumeric)
-Positions eleven to thirteen – Information Issue Number (numeric)
-Position fourteen to fifteen – Information Security Classification (numeric)
-ICN – Model Identification based:
+ICN  CAGE CODE based:
+Positions one to five  Originator (Commercial and Government Entity Code) (alphanumeric)
+Positions six to ten  Originator’s Information Unique Identifier (alphanumeric)
+Positions eleven to thirteen  Information Issue Number (numeric)
+Position fourteen to fifteen  Information Security Classification (numeric)
+ICN  Model Identification based:
 Positions one to fourteen  Model Identification (alphanumeric)
 Position fifteen to eighteen  Standard Numbering System Code
 (alphanumeric)
-Positions nineteen to twenty-seven Standard Numbering System Code (numeric)
+Positions nineteen to twenty-seven  Standard Numbering System Code (numeric)
 Position twenty-eight  Reponsible Partner Company Code
 (alphanumeric)
-Positions twenty-nine to thirty-three Originator (Commercial and Government
+Positions twenty-nine to thirty-three  Originator (Commercial and Government
 Entity) (alphanumeric); see Data Element
 sheet for partIdentifier (PID).
 Positions thirty-four to thirty-eight  Originator’s Information Unique Identifier
@@ -2819,8 +2816,8 @@ Ch.1 (provisioning)
 DESCRIPTION/PURPOSE
 To identify different issues of Information (e.g. corrections, configurations).
 CODE(S)
-001 Initial Issue Number
-002 First update
+001  Initial Issue Number
+002  First update
 Etc.
 REMARK(S)
 --
@@ -2859,9 +2856,9 @@ Ch.1 (provisioning)
 DESCRIPTION/PURPOSE
 To be used for different styles of the same information.
 CODE(S)
-A First Style
-B Different Style (e.g. colour, size, etc.)
-C-Z Further Different styles
+A  First Style
+B  Different Style (e.g. colour, size, etc.)
+C-Z  Further Different styles
 REMARK(S)
 --
 EXAMPLE(S)
@@ -2881,8 +2878,8 @@ DESCRIPTION/PURPOSE
 Identifies an Item Name in the NATO Codification System.
 CODE(S)
 Each Item Name is assigned an individual code.
- Approved Item Names as per NATO Item Name Directory H6.
- Non-approved Item Names are assigned code ‘77777’.
+Approved Item Names as per NATO Item Name Directory H6.
+Non-approved Item Names are assigned code ‘77777’.
 REMARK(S)
 NATOItemNameCode is to be provided for all items which have a
 figureItemReasonForSelection other than 0.
@@ -3056,7 +3053,7 @@ the key for each record in the Initial Provisioning (IP) presentation of data. I
 the sequence within the Item Number in which records will be presented in the Illustrated
 Parts Catalogue.
 CODE(S)
-Position one & two Enter the numeric sequence number starting 00.
+Position one & two  Enter the numeric sequence number starting 00.
 Position three  Enter variant number starting A through to Z then 0 through to
 9 (except alpha I and O).
 REMARK(S)
@@ -3214,17 +3211,13 @@ DESCRIPTION/PURPOSE
 Identifies the issue status and serial number of each Initial Provisioning List presentation
 and updating message for a specific provisioningProjectIdentifier (IPP).
 CODE(S)
-Position one Enter the issue status code:
-D  Draft issue status
-F  Formal issue status
-M
-R
-Position two
-Master issue status
-Restatement
-Enter the Serial Number of the issue status beginning at 1 with the
+D  Draft issue status  Position one Enter the issue status code
+F  Formal issue status  Position one Enter the issue status code
+M  Position two Master issue status 
+R  Restatement
+other  Enter the Serial Number of the issue status beginning at 1 with the
 first issue.
-Exception for the IP-Programme: For a deleted IPP the following code must be used:
+Exception for the IP-Programme  For a deleted IPP the following code must be used:
 CA Cancelled for a deleted IPP in the IP-Programme.
 REMARK(S)
 --
@@ -3308,71 +3301,42 @@ Ch.2 (spare parts list)
 DESCRIPTION/PURPOSE
 This code classifies the item ordered into technical/logistical categories.
 CODE(S)
-AG
-AK
-Support Equipment (e.g. Ground Support Equipment, Aerospace Ground
-Equipment (AGE))
-Accessory (e.g. Dust Cap, Permanent Marker, Duster)
-BD
-BM
-Break Down
-Building Materials (e.g. brick, tiles)
+AG  Support Equipment (e.g. Ground Support Equipment, Aerospace Ground Equipment (AGE))
+AK  Accessory (e.g. Dust Cap, Permanent Marker, Duster)
+BD  Break Down
+BM  Building Materials (e.g. brick, tiles)
 BR  Break Down Reassurance 
 C1  Category 1 Container 
-CS
-DO
-Consumables
-Documentation (e.g. Engineering Record Card, Certificates)
-DS
-DV
-Data Storage Medium
-Device (e.g. Electricity Generator, Mobile Phone)
-EA
-HC
-Engine Related Accessories
-Hardware, Commercial-of-the-Shelf (COTS) (e.g. Personal Computer)
-HW Hardware, Non-COTS (e.g. Customized Personal Computer) 
+CS  Consumables
+DO  Documentation (e.g. Engineering Record Card, Certificates)
+DS  Data Storage Medium
+DV  Device (e.g. Electricity Generator, Mobile Phone)
+EA  Engine Related Accessories
+HC  Hardware, Commercial-of-the-Shelf (COTS) (e.g. Personal Computer)
+HW  Hardware, Non-COTS (e.g. Customized Personal Computer) 
 LR  Line Replaceable Item 
 MC  Anaesthetics/Medical Chemicals 
 MD  Module 
-MG
-ME
-Ammunition with Dangerous Substances (e.g. Ammunition with Uranium)
-Explosives (e.g. Cartridge)
+MG  Ammunition with Dangerous Substances (e.g. Ammunition with Uranium)
+ME  Explosives (e.g. Cartridge)
 ML  Modification Leaflet 
-MM Medical Supplies 
-MS
-MU
-NP
-NS
-Modification Set
-Ammunition
-Not Procurable
-Norm and Standard Part (items manufactured to a standard e.g. screws,
-resistors, fuses)
+MM  Medical Supplies 
+MS  Modification Set
+MU  Ammunition
+NP  Not Procurable
+NS  Norm and Standard Part (items manufactured to a standard e.g. screws,resistors, fuses)
 OS  Obsolete Item 
-PA
-RE
-Packaging excl. CAT 1 containers (e.g. standard packs, boxes, ISO containers)
-Role Equipment
-RM
-RT
-SB
-SC
-Raw Material
-Rotable (e.g. Engine Starter)
-Service Bulletin
-Software, Commercial-of-the-Shelf (COTS)
-SM
-ST
-Split Design Module
-Standard Tool (e.g. screwdriver, reamer)
-SW
-TE
-TP
-Software, Non-COTS
-Test Equipment (e.g. multimeter)
-Technical Publication
+PA  Packaging excl. CAT 1 containers (e.g. standard packs, boxes, ISO containers)
+RE  Role Equipment
+RM  Raw Material
+RT  Rotable (e.g. Engine Starter)
+SB  Service Bulletin
+SC  Software, Commercial-of-the-Shelf (COTS)
+SM  Split Design Module
+ST  Standard Tool (e.g. screwdriver, reamer)
+SW  Software, Non-COTS
+TE  Test Equipment (e.g. multimeter)
+TP  Technical Publication
 REMARK(S)
 This code can also be used for planning, budgeting, invoicing and reporting/controlling
 activities.
@@ -3764,11 +3728,10 @@ Additionally, within
 and Establishments, such as Contractors and Customers in order to identify senders and
 recipients when exchanging data.
 CODE(S)
-The Code used is as specified in the NATO CODE List for Commercial and Government
-Entity (CAGE CODE).
-The following free web-sites can be used to research MFC codes:
-- For UK: http://www/isisweb.mod.uk (click on NCAGE enquiry)
-- For USA: http://www.bpn.gov/bincs/default.asp
+Info  The Code used is as specified in the NATO CODE List for Commercial and Government
+Entity  (CAGE CODE).
+For UK  http://www/isisweb.mod.uk (click on NCAGE enquiry)  free web-sites can be used to research MFC codes
+For USA  http://www.bpn.gov/bincs/default.asp  free web-sites can be used to research MFC codes
 REMARK(S)
 When no MFC is specified but, according to NATO rules, it should be available, apply to
 National NCB for allocation of a new MFC.
@@ -3792,12 +3755,12 @@ Identifies the range of items to be used for the selection, manufacture, rework 
 the item which carries a figureItemSelectCondition (SMF).
 CODE(S)
 Enter location details (using ‘from/to’ where applicable) expressed by:
-•  Complete figureItemIdentifier (CSN) if the range is in a different Chapter, Sub-
+•Complete figureItemIdentifier (CSN) if the range is in a different Chapter, Sub-
 Chapter or Sub-Sub-Chapter to the subject SMFI item.
-•  Only Figure and Item Number if the range is within the same Sub-Sub-Chapter, but
+•Only Figure and Item Number if the range is within the same Sub-Sub-Chapter, but
 in a different Figure.
-•  Only the Item Number when the range is within the same Figure.
-•  Or enter the partIdentifier (PID) of the “reworked from” item when the
+•Only the Item Number when the range is within the same Figure.
+•Or enter the partIdentifier (PID) of the “reworked from” item when the
 figureItemSelectCondition (SMF) is filled with “R”.
 REMARK(S)
 --
@@ -3967,8 +3930,8 @@ The magnetic sensitive device property identifies electronic components subject 
 catastrophic failure, major characteristic change or performance degradation from the effect
 of magnetic fields.
 CODE(S)
-N Item is not magnetic sensitive
-Y Item is magnetic sensitive
+N  Item is not magnetic sensitive
+Y  Item is magnetic sensitive
 REMARK(S)
 The magneticSensitive indication will be provided only for items which have a
 figureItemReasonForSelection (RFS) other than 0.
@@ -4036,48 +3999,41 @@ Ch.3 (material supply)
 DESCRIPTION/PURPOSE
 To indicate the type of message.
 CODE(S)
-For Chapter 1 (Provisioning): 
-CSNIPD  CSN-Oriented IP Message 
-PNOIPD  Part-Oriented IP Message 
-CSNUPD  Update to CSN-Oriented Message 
-PNOUPD
-RESTIP
-Update to Part-Oriented IP Message
-Restatement Message
-For Chapter 2 (Spare Parts List), and
-For Chapter 3 (Material Supply):
-CNT  control 
-IN1  invoice 
-IN2  invoice acceptance 
-IN3
-IN4
-invoice rejection
-payment advice
-OA1  order amendment 
-OA2  order amendment acceptance 
-OA3  order amendment rejection 
-OD1  claim of work complete 
-OD4  claim of work complete acknowledgement
-OD5  claim of work complete retired 
-OP1  order placement 
-OP2  order placement acceptance 
-OP3  order placement rejection 
-OT1  shipment request 
-OT2  shipment request acceptance 
-OT4  shipment status 
-QA1  quotation amendment 
-QA2  quotation amendment acceptance 
-QA3  quotation amendment rejection 
-QA4  quotation amendment status advice 
-QP1  quotation placement 
-QP2  quotation placement acceptance 
-QP3  quotation placement rejection 
-QP4  quotation placement status advice 
-QR1  quotation request 
-QR3  quotation request rejection 
-PL1  spare parts list submission 
-PL2  spare parts list acceptance 
-PL3  spare parts list rejection 
+CSNIPD  CSN-Oriented IP Message  For Chapter 1 (Provisioning)
+PNOIPD  Part-Oriented IP Message  For Chapter 1 (Provisioning)
+CSNUPD  Update to CSN-Oriented Message  For Chapter 1 (Provisioning)
+PNOUPD  Update to Part-Oriented IP Message  For Chapter 1 (Provisioning)
+RESTIP  Restatement Message  For Chapter 1 (Provisioning)
+CNT  control  For Chapter 2 (Spare Parts List), and For Chapter 3 (Material Supply)
+IN1  invoice  For Chapter 2 (Spare Parts List), and For Chapter 3 (Material Supply)
+IN2  invoice acceptance  For Chapter 2 (Spare Parts List), and For Chapter 3 (Material Supply)
+IN3  invoice rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+IN4  payment advice  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OA1  order amendment  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OA2  order amendment acceptance  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OA3  order amendment rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OD1  claim of work complete  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OD4  claim of work complete acknowledgement  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OD5  claim of work complete retired  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OP1  order placement  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OP2  order placement acceptance  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OP3  order placement rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OT1  shipment request  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OT2  shipment request acceptance  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+OT4  shipment status  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QA1  quotation amendment  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QA2  quotation amendment acceptance  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QA3  quotation amendment rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QA4  quotation amendment status advice  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QP1  quotation placement  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QP2  quotation placement acceptance  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QP3  quotation placement rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QP4  quotation placement status advice  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QR1  quotation request  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+QR3  quotation request rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+PL1  spare parts list submission  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+PL2  spare parts list acceptance  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
+PL3  spare parts list rejection  For Chapter 2 Spare Parts List, and For Chapter 3 Material Supply
 REMARK(S)
 --
 EXAMPLE(S)
@@ -4127,7 +4083,7 @@ The NATOItemIdenfificationNumber is assigned to each approved item identificatio
 the identification number within NATO for that item of supply. The NIN forms the last nine
 digits of the NATOStockNumber (NSN).
 CODE(S)
-Positions one to two  Identifies the National Codification Bureau (NCB) which
+Positions one to two Identifies the National Codification Bureau (NCB) which
 assigned the NSN.
 Positions three to nine  A non-significant number assigned by the codifying NCB.
 REMARK(S)
@@ -4527,9 +4483,9 @@ DESCRIPTION/PURPOSE
 The partChangeabilityStrategy is the third position of the PMS. It indicates the lowest
 Maintenance Level allowed to remove or replace of the part.
 CODE(S)
-D Remove or replace at depot level. 
+D  Remove or replace at depot level. 
 F  Remove or replace at intermediate/base level. 
-O Remove or replace at organizational/ship level.
+O  Remove or replace at organizational/ship level.
 REMARK(S)
 --
 EXAMPLE(S)
@@ -4575,7 +4531,7 @@ DESCRIPTION/PURPOSE
 Identifies items which fall into the category of a Pool Item Candidate, according to the
 agreed conditions.
 CODE(S)
-1 Indicates item to be a Pool Item Candidate.
+1  Indicates item to be a Pool Item Candidate.
 REMARK(S)
 The use and application of this data element, together with the definition of the conditions
 which constitute a poolItemCandidate are to be agreed at the start of the Project.
@@ -4607,7 +4563,7 @@ REMARK(s)
 --
 EXAMPLE(S)
 - --
-DATA_ELEMENT_NAME  prece dingFigureItemSequenceNumberInterchangeability
+DATA_ELEMENT_NAME  precedingFigureItemSequenceNumberInterchangeability
 TEI/ACRONYM  PIY
 FORMAT  an1
 XML_DATA_TYPE
@@ -4624,33 +4580,14 @@ succeedingFigureItemSequenceNumberInterchangeability (SIY) indicate the
 interchangeability of two or more items at the same location either for the same configuration
 or, when a partIdentifier change is involved, across two different Configuration Standards.
 CODE(S)
-BLANK =  This indicates that the interchangeability condition cannot be positively identified
-or represented. Items presented at the same location with interchangeability
-‘blank’ may, or may not, be interchangeable. The use of interchangeability
-‘blank’ will only have application for items presented at different Configuration
-Standards.
-EXAMPLE
-partIdentifier Preceding
-(PIY)
-Succeeding
-(S IY)
-A  (Pre Mod 1) 
-B  (Post Mod 1) 
-Indicates that no positive interchangeability condition exists between parts A
-and B.
-0 =  Indicates that the items are not interchangeable.
+BLANK  This indicates that the interchangeability condition cannot be positively identified or represented. Items presented at the same location with interchangeability ‘blank’ may, or may not, be interchangeable. The use of interchangeability ‘blank’ will only have application for items presented at different Configuration Standards. EXAMPLE partIdentifier Preceding (PIY) Succeeding(S IY)A (Pre Mod 1) B (Post Mod 1) Indicates that no positive interchangeability condition exists between parts A and B.
+0  Indicates that the items are not interchangeable.
 Both of the items must carry code ‘0’. The use of code ‘0’ will only have
 application for items presented at different Configuration Standards.
 EXAMPLE
-partIdentifier Preceding
-(PIY)
-Succeeding
-(SIY)
-A  (Pre Mod 1)  -  0
-B  (Post Mod 1)  0  -
-1
-2
-= Indicates full interchangeability with the following applications:
+partIdentifier;Preceding(PIY);Succeeding(SIY)
+A(Pre Mod 1)-0;B(Post Mod 1)0-
+1/2  Indicates full interchangeability with the following applications:
 Interchangeability codes ‘1’ and ‘2’ must always be used one with the other, and
 may be used for two items presented at the same Configuration Standard, or for
 two items at different Configuration Standards.
@@ -4667,12 +4604,7 @@ code ‘2’ item (which was installed during series production) with a code ‘
 used until stocks are exhausted) which could in some instances constitute a
 demodification action.
 EXAMPLE (same Configuration Standard)
-PartIdentifier Preceding
-(PIY)
-Succeeding
-(SIY)
-A  -  1
-B  2  -
+PartIdentifier Preceding(PIY);Succeeding(SIY);A;-;1B;2;-
 Items A and B are fully interchangeable but B is preferred and A is running out of
 supply.
 EXAMPLE (different Configuration Standard)
@@ -4680,11 +4612,11 @@ PartIdentifier Preceding
 (PIY)
 Succeeding
 (SIY)
-A  (Pre Mod 1)  -  1
-B  (Post Mod 1)  2  -
+A(Pre Mod 1)-1
+B(Post Mod 1)2-
 Items A and B are at different Configuration Standards and are fully
 interchangeable.
-3 =  Indicates an item that has a one way interchangeability with another
+3  Indicates an item that has a one way interchangeability with another
 (interchangeability code ‘5’) item.
 The use of interchangeability code ‘3’ must always be accompanied with an
 interchangeable ‘5’ item and will only be applied to items presented at different
@@ -4699,8 +4631,8 @@ PartIdentifier Preceding
 (PIY)
 Succeeding
 (SIY)
-A  (Pre Mod 1)  -  3
-B  (Post Mod 1)  5  -
+A(Pre Mod 1)-3
+B(Post Mod 1)5-
 One way interchangeability shows B may replace A, but A cannot replace B
 (which must be replaced by B).
 EXAMPLE
@@ -4708,9 +4640,9 @@ PartIdentifier  Preceding
 (PIY)
 Succeeding
 (SIY)
-A  (Pre Mod 1)  -  3
-B  (Post Mod 1) (Pre Mod 2)  5  3
-C  (Post Mod 2)  5  -
+A (Pre Mod 1) - 3
+B (Post Mod 1) (Pre Mod 2) 5 3
+C Post Mod 2) 5 -
 The one way interchangeability links show that part A can be replaced by A, B, or
 C that part B can be replaced by B or C and that C can only be replaced by C.
 EXAMPLE
@@ -4718,14 +4650,14 @@ PartIdentifier Preceding
 (PIY)
 Succeeding
 (SIY)
-A  (Pre Mod 1)  -  4
-B  (Pre Mod 1)  4  3
-C  (Post Mod 1)  5  -
+A (Pre Mod 1) - 4
+B (Pre Mod 1) 4 3
+C (Post Mod 1) 5 -
 Mod 1 which has introduced C has brought a one-way interchangeability between
 the pre-mod PartIdentifiers A and B and the post mod item C. As
 interchangeability ‘4’ applies between A and B then parts A and B can be
 replaced by A, B or C. Part C must be replaced by part C.
-4 =  Indicates an item which is fully interchangeable with, but not identical to, other
+4  Indicates an item which is fully interchangeable with, but not identical to, other
 interchangeable ‘4’ items. It is to be used only when the items are presented at
 the same Configuration Standard. When items are presented at different
 Configuration Standards then codes 1-2 or 3-5 must be applied.
@@ -4734,36 +4666,36 @@ PartIdentifier Preceding
 (PIY)
 Succeeding
 (SIY)
-A  -  4
-B  4  -
+A - 4
+B 4 -
 A and B are fully interchangeable.
 EXAMPLE
 PartIdentifier Preceding
 (PIY)
 Succeeding
 (SIY)
-A  (Pre Mod 1)  -  4
-B  (Pre Mod 1)  4  3
-C  (Post Mod 1)  5  4
-D  (Post Mod 1)  4  -
+A (Pre Mod 1) - 4
+B (Pre Mod 1) 4 3
+C (Post Mod 1) 5 4
+D (Post Mod 1) 4 -
 This indicates parts A and B are fully interchangeable and that C and D are fully
 interchangeable, and that the mod has introduced a one way interchangeability
 between the pre and post mod items.
-5 =  Indicates an item which has a one way interchangeability with another (code ‘3’)
+5  Indicates an item which has a one way interchangeability with another (code ‘3’)
 item. The use of interchangeable code ‘5’ must always be accompanied with an
 interchangeable code ‘3’ item and will only be applied to items presented at
 different Configuration Standards.
 See code ‘3’ for details of application.
-6 =  Indicates an item which has a qualified interchangeability with another
+6  Indicates an item which has a qualified interchangeability with another
 interchangeable ‘6’ item. The conditions under which this qualified
 interchangeability is operative should be provided in the figureItemDescription.
-7 =  Indicates an obsolete item where the Customer has confirmed that there is no
+7  Indicates an obsolete item where the Customer has confirmed that there is no
 requirement for a replacement, irrespective of whether there are other ICY 2, 4 or
 9 items available.
 The ICY-code 7 will be inserted at all locations in the IP Data where the obsolete
 item occurs.
-8 =  Not used.
-9 =  Indicates an item which is fully interchangeable with, and identical to, other
+8  Not used.
+9  Indicates an item which is fully interchangeable with, and identical to, other
 interchangeable ‘9’ items. It is to be used when a secondary PartIdentifier is
 shown, for example, a Vendor allocated identity to a proprietary item which can
 otherwise be supplied direct by the proprietary firm. In such cases the proprietary
@@ -4773,7 +4705,7 @@ ACodP 1.
 Interchangeable ‘9’ related items would always qualify for the same NSN.
 Interchangeability ‘9’ is to be used only when items are presented at the same
 Configuration Standard.
-- =  Used as a ‘filler’ to make clear the position of a single numerical code presented
+-  Used as a ‘filler’ to make clear the position of a single numerical code presented
 in the interchangeability field.
 REMARK(S)
 APPLICATION
@@ -4842,34 +4774,25 @@ Ch.2 (spare parts list)
 DESCRIPTION/PURPOSE
 Specifies the packaging requirement for an item.
 CODE(S)
-0 
-No Packaging required. To be used for certain Support Equipment end items and for
+0  No Packaging required. To be used for certain Support Equipment end items and for
 CATEGORY 1 CONTAINER.
-1 
-Duration: 1 Year Outdoors. Duration: 1 Year Outdoors Location: NATO Wide Open or
+1  Duration: 1 Year Outdoors. Duration: 1 Year Outdoors Location: NATO Wide Open or
 enclosed movement by land, air or sea under operational conditions. Multiple
 Handling.
-2 
-Duration: 3 Years Outdoors. Duration: 3 Years Outdoors Location: NATO Europe
+2  Duration: 3 Years Outdoors. Duration: 3 Years Outdoors Location: NATO Europe
 Open or enclosed movement by land, air or sea under operational conditions.
 Multiple Handling.
-3 
-Duration: 5 Years in ventilated permanent buildings. Duration: 5 Years in ventilated
+3  Duration: 5 Years in ventilated permanent buildings. Duration: 5 Years in ventilated
 permanent buildings Location: NATO Europe Enclosed movement by land, air or sea.
 Multiple Handling with mechanical handling equipment.
-4 
-Duration: 1 Year in ventilated permanent buildings. Duration: 1 Year in ventilated
+4  Duration: 1 Year in ventilated permanent buildings. Duration: 1 Year in ventilated
 permanent buildings Location: NATO Europe Common carrier conditions only.
 Minimal Handling by mechanical handling equipment.
-5 
-Trade Pack Package normally used by the manufacturer for commercial deliveries of
+5  Trade Pack Package normally used by the manufacturer for commercial deliveries of
 the material.
-7 
-Same definition as code 1 + CATEGORY 1 CONTAINER required.
-8 
-Same definition as code 2 + CATEGORY 1 CONTAINER required.
-9 
-Same definition as code 3 + CATEGORY 1 CONTAINER required.
+7  Same definition as code 1 + CATEGORY 1 CONTAINER required.
+8  Same definition as code 2 + CATEGORY 1 CONTAINER required.
+9  Same definition as code 3 + CATEGORY 1 CONTAINER required.
 REMARK(S)
 The codes must take the STANAG 4280 ‘NATO Levels of Requirements for Packaging’ into
 consideration.
@@ -4963,12 +4886,11 @@ activities that may be performed on a part. It provides information on Source, a
 instructions on Repair responsibilities, identifying methods of Repair (i.e. Procure, Replace,
 and Manufacture) and instructions on disposal of unserviceable parts.
 CODE(S)
-The partMaintenanceSolution consists of five parts as follows:
--  First and Second character: partSourcingStrategy (PSS)
--  Third character: partChangeabilityStrategy (PCS)
--  Fourth character: partOverhaulabilityStrategy (POS)
--  Fifth character: partRecoverabilityStrategy (PRS)
--  Sixth character: partNationalSpecificClassification (PNC)
+- First and Second character  partSourcingStrategy (PSS)
+- Third character  partChangeabilityStrategy (PCS)
+- Fourth character  partOverhaulabilityStrategy (POS)
+- Fifth character  partRecoverabilityStrategy (PRS)
+- Sixth character  partNationalSpecificClassification (PNC)
 REMARK(S)
 If an Item has different SMR-codes at multiple locations, then the PMS should be to the
 lowest common factor. That means if the SMR-code differs per location then the PMS has to
@@ -5067,10 +4989,10 @@ part is to be repaired and if it so, what the lowest Maintenance Level capable o
 the repair is.
 CODE(S)
 B  No Repair Recondition
-D Limited repair at level “F” or “O”
+D  Limited repair at level “F” or “O”
 F  Repair at level “F” 
 L  Repair at level ” L” 
-O Repair at level “O” 
+O  Repair at level “O” 
 Z  No Repair 
 REMARK(S)
 --
@@ -5112,17 +5034,14 @@ DESCRIPTION/PURPOSE
 A unique identifier to define payment milestone numbers or payment plan dates in
 accordance with the terms of a contract.
 CODE(S)
-1st Character:
-•  Use one of the following characters:
-o D = Date
-o W = Week
-o M = Month
-o N = Milestone Number
-2 nd to 9 th Character:
-•  When D: Enter the date as: “YYYYMMDD”
-•  When W: Enter the number of the week as: “YYYYWW”
-•  When M: Enter the month as: “YYYYMM”.
-•  When N: Enter the milestone number as “NN”.
+D  Date  1st Character
+W  Week  1st Character
+M  Month  1st Character
+N  Milestone Number  1st Character
+• When D  Enter the date as: “YYYYMMDD”  2 nd to 9 th Character
+• When W  Enter the number of the week as: “YYYYWW”  2 nd to 9 th Character
+• When M  Enter the month as: “YYYYMM”.  2 nd to 9 th Character
+• When N  Enter the milestone number as “NN”.  2 nd to 9 th Character
 REMARK(S)
 --
 EXAMPLE(S)
@@ -5147,9 +5066,9 @@ The partRecoverabilityStrategy is the fifth position of the PMS. It determines w
 the removed or broken material is necessary and at which level it is carried out.
 CODE(S)
 A  Special Handling 
-D Repairable, condemn at Depot Level or Industrial Maintenance Organisation.
+D  Repairable, condemn at Depot Level or Industrial Maintenance Organisation.
 F  "Repairable, condemn at the level of intermediate/base (or depot) 
-O "Repairable, at the level of organizational/ship (or field, or depot) 
+O  "Repairable, at the level of organizational/ship (or field, or depot) 
 Z  "Not repairable, condemn at all Level. 
 REMARK(S)
 --
@@ -5171,16 +5090,13 @@ DESCRIPTION/PURPOSE
 A code supplied by the Customer to indicate security classification of and/or security risk or
 pilferage controls for storage and retrieval of physical assets.
 CODE(S)
-See the following Table, taken from NATO Manual On Codification ACodP-1:
-Pilferage CODE
-A code indicating the material has a ready resale value or civilian application for
+A  code indicating the material has a ready resale value or civilian application for
 personal possession and, therefore, is especially subject to theft.
 CODE  EXPLANATION
 $  Useful to ill-disposed persons such as criminals and terrorists 
 %  Valuable and attractive 
 I  Aircraft engine and parts 
-J  Pilferage-Pilferage controls may be designated by the coding activity to items coded U
-(Unclassified) by recording the item to J
+J  Pilferage-Pilferage controls may be designated by the coding activity to items coded U(Unclassified) by recording the item to J
 M  Handtools and shop equipment 
 N  Fire arms 
 P  Ammunition and explosives 
@@ -5257,10 +5173,10 @@ of acquiring support for the part. The first position is always "P".
 CODE(S)
 PA  procurable and stocked 
 PB  procurable and insurance 
-PC procurable and deteriorative 
+PC  procurable and deteriorative 
 PE  procurable Support Equipment and stocked 
 PF  procurable Support Equipment and non-stocked
-PG procurable and life of system support 
+PG  procurable and life of system support 
 REMARK(S)
 --
 EXAMPLE(S)
@@ -5646,36 +5562,36 @@ Ch.1 (provisioning)
 DESCRIPTION/PURPOSE
 Indicates the basic reason for selection as a potential spare part.
 CODE(S)
-0 Not a Recommended Spare. Parts will not normally require replacement for the life
+0  Not a Recommended Spare. Parts will not normally require replacement for the life
 of the using unit but are included in the provisioning data for continuity and
 completeness.
-1 Wear. Applies to those items which contain moving parts or are themselves moving
+1  Wear. Applies to those items which contain moving parts or are themselves moving
 during their designed operational functions (e.g. valve assemblies, actuators,
 motors, bearings etc.). Applies to non-moving parts which are considered subject to
 bumping or rubbing through normal usage by an adjacent part or foreign object (e.g.
 carpets, seats, door seals, retainers, turbine buckets, turbine blades, etc.). Applies
 to parts required for replacement due to secondary damage (e.g. failure of adjacent
 parts).
-2 Maintenance Damage. Identifies parts which are:
+2  Maintenance Damage. Identifies parts which are:
 a) Accidentally damaged during normal maintenance or overhaul of the using
 unit or adjacent unit (e.g. nuts, bolts, shims etc.)
 b) Subject to replacement or are expended during overhaul or repair of
 individual units (e.g. gaskets, packings, O-rings, nuts, bolts, cotterpins etc.)
 c) Subject to damage during normal servicing operational functions (e.g.
 refueling, passenger and baggage loading etc.)
-3 Loss. Parts normally required due to loss during maintenance or overhaul of an
+3  Loss. Parts normally required due to loss during maintenance or overhaul of an
 individual unit (e.g. small springs, pins, screws, nuts etc).
-4 Vibration. Parts that are subject to damage due to vibration.
-5 Corrosion. Parts which, if not maintained by cleaning and/or adequate protective
+4  Vibration. Parts that are subject to damage due to vibration.
+5  Corrosion. Parts which, if not maintained by cleaning and/or adequate protective
 coating, will require replacement because of oxidation or chemical action of a
 foreign substance.
-6 Deterioration. Parts which degenerate or have their efficiency impaired as a result of
+6  Deterioration. Parts which degenerate or have their efficiency impaired as a result of
 normal (other than wear) functioning (e.g. parts with cure date, instruments,
 electrical equipment etc.).
-7 Extreme Temperature. Parts installed in areas subject to extreme temperature and
+7  Extreme Temperature. Parts installed in areas subject to extreme temperature and
 those which within themselves generate abnormal temperatures.
-8 Other. Provide explanation within asterisks in the figureItemDescription (DFP).
-9 Accidental Damage (Insurance) Parts which are lost or damaged for reasons other
+8  Other. Provide explanation within asterisks in the figureItemDescription (DFP).
+9  Accidental Damage (Insurance) Parts which are lost or damaged for reasons other
 than those defined in codes 1 to 7 and which are only recommended as spares on
 the basis of insurance against unforeseen loss or damage.
 REMARK(S)
@@ -5707,7 +5623,7 @@ known, as a result of test or evaluation, to qualify for the stated critical
 application. Include only those drawings which meet the definition of
 ‘Source Control Drawing’ in the national specification. (Applicable only to
 Type 1, 1B, 2 , 4 and 4B Item Identification).
-2 Definitive Government Specification or Standard Designator Reference. A
+2  Definitive Government Specification or Standard Designator Reference. A
 partIdentifier, Style Number, or Type Designator included in, or developed
 in accordance with, a Government Specification or Standard, which has the
 effect of fully identifying an item of supply. This code shall also be used of a
@@ -5724,7 +5640,7 @@ production or a range of items of production, by the Manufacturer
 controls the design, CHARACTERISTICS, and production of the item by
 means of its engineering drawings, specifications and inspection
 requirements.
-4 Non-definitive Government Specification or Standard Reference. Any
+4  Non-definitive Government Specification or Standard Reference. Any
 Government specification or standard reference other than those indicated
 in code 2 as definitive references. This code shall be used for non-definitive
 Government Specifications and Standard references and non-definitive
@@ -5909,22 +5825,22 @@ Ch.3 (material supply), non-essential data element
 DESCRIPTION/PURPOSE
 A code to identify the status of a repair order during the order life-cycle.
 CODE(S)
-REP = Replacement Order
-REC = Order Received
-ASH = Order Accepted – Item to be Shipped
-ANS = Order Accepted – No Shipment
-ISH = Item Shipped for Repair
-IRC = Item Received for Repair
-TIN = Technical Inspection
-NFF = No Fault Found – Return to Customer
-REP = Item in Repair
-SCR = Scrap and Return to Customer
-SCI = Scrap at Industry
-RSH = Return Shipment to Customer – Invoice to Follow
-FOC = Return Shipment to Customer – Free Of Charge – Order Completed
-RSR = Return Shipment received
-INV = Invoiced – Order Completed
-INS = Invoiced – No Shipment – Order Completed
+REP  Replacement Order
+REC  Order Received
+ASH  Order Accepted – Item to be Shipped
+ANS  Order Accepted – No Shipment
+ISH  Item Shipped for Repair
+IRC  Item Received for Repair
+TIN  Technical Inspection
+NFF  No Fault Found – Return to Customer
+REP  Item in Repair
+SCR  Scrap and Return to Customer
+SCI  Scrap at Industry
+RSH  Return Shipment to Customer – Invoice to Follow
+FOC  Return Shipment to Customer – Free Of Charge – Order Completed
+RSR  Return Shipment received
+INV  Invoiced – Order Completed
+INS  Invoiced – No Shipment – Order Completed
 REMARK(S)
 The above codes may be supplemented by project specific codes agreed between
 Customer and Contractor.
@@ -5988,8 +5904,8 @@ The radiation sensitive device property identifies electronic components subject
 catastrophic failure, major characteristic change or performance degradation from the effect
 of radioactive fields.
 CODE(S)
-N Item is not radiation sensitive
-Y Item is radiation sensitive
+N  Item is not radiation sensitive
+Y  Item is radiation sensitive
 REMARK(S)
 The radiationSensitive indication will be provided only for items which have
 figureItemReasonForSelection (RFS) other than 0.
@@ -6235,13 +6151,13 @@ KB  CFD will follow on OP4 Transaction.
 KC  Customer accepts liability previously indicated by KA Status/Advice Code. 
 KD  Goods have not been received. 42 days have elapsed since OD1 Transaction. 
 KG  Order related price; not yet agreed; automatic issue of OA2 required. 
-KM The changed Data Element(s) in OA1 transaction will result in a quantity change. 
+KM  The changed Data Element(s) in OA1 transaction will result in a quantity change. 
 KP  PACKING LEVEL CODE adjustment required. 
 KU  The changed Data Element (OA1 Transaction) has resulted in a quantity change. 
 LI  This is a CFD progression message. 
 NC  Industry internal credit note. 
 ND  Requested for payment. 
-NO The offset value includes a VAT element. (Offset VAT.) 
+NO  The offset value includes a VAT element. (Offset VAT.) 
 NV  VAT shown for tax purposes only. Not requested for payment. 
 P2  Price submission differs from National Authority agreement; reference in
 REMARKS.
@@ -6266,7 +6182,7 @@ PH  Order related price approval not available (OA1).
 PK  Procurement data to be updated. Used on OP4 for skeleton records created by a
 Special Order. Only one occurrence per ORDER NUMBER.
 PL  Price applicable at Date of Delivery (DOD). 
-PM Transmitted items are additions to the CPL. 
+PM  Transmitted items are additions to the CPL. 
 PN  Transmitted items are updates to existing items on CPL. 
 PO  Price applicable at Date of Order (DOA). 
 PQ  Order is subject to Batch release. For further details see REMARKS. 
@@ -6284,21 +6200,21 @@ RC  Holding factor Tools/Test Set.
 RD  Holding factor Mod Set. 
 RE  Holding factor Price Agreement. 
 RF  Holding factor Contractor resources. 
-RG Holding factor National Quality Assurance Representative (NQAR) acceptance. 
+RG  Holding factor National Quality Assurance Representative (NQAR) acceptance. 
 RH  Holding factor Authorization. 
 RJ  Holding factor others; see REMARKS. 
 RK  Holding factor modification embodiment. 
-RM Request Repair/Modification to cost limit. 
+RM  Request Repair/Modification to cost limit. 
 RN  Request Repair/Modification to 100% cost. 
-RO Request Overhaul. 
+RO  Request Overhaul. 
 RP  Request scrap. 
-RQ Request specific Scope of Work; see REMARKS. 
+RQ  Request specific Scope of Work; see REMARKS. 
 RR  Request accepted by NQAR. 
 RS  Request not accepted by NQAR. 
 RT  Contractor liability rejected. 
 RU  Contractor liability accepted. 
 SE  Invoice is for services 
-SM Split Design Modules. (For Order Confirmation.) 
+SM  Split Design Modules. (For Order Confirmation.) 
 XA  Item no longer on stock. Substitute item in REMARKS. If substitute item required,
 submit new order.
 XB  Discrepancy in shipment. Case numbers received are quoted. Details may also
@@ -6314,7 +6230,7 @@ XH  Offer of Redistribution Expires as outlined by the QUOTATION EXPIRY DATE.
 XJ  Return of goods due to expiry of loan. 
 XK  Response to Status/Advice Code A1. 
 XL  Response to Status/Advice Code A2. 
-XM Your offer is no longer needed. 
+XM  Your offer is no longer needed. 
 XN  Response to Status/Advice Code KD. 
 XP  Response to Status/Advice Code A3. 
 XS  MSS-transfer already carried out; for record purposes only. 
@@ -6355,7 +6271,7 @@ cryptographic component or other hardware item which performs a critical
 Communication Security-COMSEC-function. Items so designated are unclassified
 but controlled, and will bear the designation “Controlled Cryptographic Item” or
 “CCI”
-@ Item classified but level of classification not yet indicated/determined 
+@  Item classified but level of classification not yet indicated/determined 
 A  Confidential-Formerly Restricted Data 
 B  Confidential-Restricted Data 
 C  Confidential 
@@ -6580,17 +6496,17 @@ addition it can be indicated which of the serialised items require Unique Identi
 in accordance with STANAG 2290 ‘NATO Unique Identification of Items’ and why they
 require this identification.
 CODE(S)
-0 Indicates an item as not serialised
-1 Indicates an item as serialised
-2 Indicates an item as serialised and requiring UID because it is subject to Import
+0  Indicates an item as not serialised
+1  Indicates an item as serialised
+2  Indicates an item as serialised and requiring UID because it is subject to Import
 Duty Waiver.
-3 Indicates an item as serialised and requiring UID because it is considered valuable
+3  Indicates an item as serialised and requiring UID because it is considered valuable
 and/or attractive.
-4 Indicates an item as serialised and requiring UID because it is attractive to criminal
+4  Indicates an item as serialised and requiring UID because it is attractive to criminal
 and terrorist organizations (ACTO).
-5 Indicates an item as serialised and requiring UID because it is subject to the
+5  Indicates an item as serialised and requiring UID because it is subject to the
 International Traffic in Arms Regulations (ITAR).
-6 Indicates an item as serialised and requiring UID because it is classed as an
+6  Indicates an item as serialised and requiring UID because it is classed as an
 engineering managed item (EMI). Those items which are subject to engineering
 through-life support requirements: platforms, equipment, sub-assemblies or discrete
 items that nee
@@ -6617,7 +6533,7 @@ DESCRIPTION/PURPOSE
 An indicator for use when sensitive information concerning a consignment needs to be
 passed between CONTRACTOR/ CUSTOMER/ CARRIER.
 CODE(S)
-X = X-Sensitive information
+X  X-Sensitive information
 REMARK(S)
 --
 EXAMPLE(S)
@@ -6703,7 +6619,7 @@ CODE(S)
 The following codes are taken from the NATO Manual On Codification ACodP-1: :
 C  Incorporate all mandatory changes. If found satisfactory, extend the previously
 established shelf life by the time period, given in the Shelf Life Code.
-CO Check/inspect/test IAW inventory manager's instructions/technical instructions. 
+CO  Check/inspect/test IAW inventory manager's instructions/technical instructions. 
 CT  Incorporate all mandatory changes, perform minor adjustment required, clean and
 re-lubricate bearings, reassemble, test to post overhaul standards, and correct
 any observed discrepancies. Items which pass tests shall be returned to stock
@@ -6834,11 +6750,11 @@ DESCRIPTION/PURPOSE
 A code indicating if the shelf life time period of an item which attracts a SHELF LIFE is
 definite non-extendable or may be extended under certain conditions.
 CODE(S)
-0 No Shelf Life; item is non-deteriorative
-1 Shelf Life Type I - An item of supply which is determined through an evaluation of
+0  No Shelf Life; item is non-deteriorative
+1  Shelf Life Type I - An item of supply which is determined through an evaluation of
 technical test data and/or actual experience to be an item with a definite non-
 extendable period of shelf life.
-2 Shelf Life Type II - An item of supply having an assigned shelf life time period that
+2  Shelf Life Type II - An item of supply having an assigned shelf life time period that
 may be extended after completion of inspection/test/restorative
 REMARK(S)
 --
@@ -6901,11 +6817,11 @@ Repair responsibilities, identifying methods of Repair (i.e. Procure, Replace, a
 Manufacture) and instructions on disposal of unserviceable items.
 CODE(S)
 The maintenanceSolution consists of five parts as follows:
--  First and Second character: figureItemSourcingStrategy (FSY)
--  Third character: figureItemReplaceabilityStrategy (RLY)
--  Fourth character: figureItemRepairabilityStrategy (RPY)
--  Fifth character: figureItemRecoverabilityStrategy (RCY)
--  Sixth character: figureItemNationalSpecificClassification (FNC)
+-  First and Second character  figureItemSourcingStrategy (FSY)
+-  Third character  figureItemReplaceabilityStrategy (RLY)
+-  Fourth character  figureItemRepairabilityStrategy (RPY)
+-  Fifth character  figureItemRecoverabilityStrategy (RCY)
+-  Sixth character  figureItemNationalSpecificClassification (FNC)
 REMARK(S)
 At minimum always the 1st and 2nd character of the SMR-code must be provided; i.e. at
 minimum always the figureItemSourcingStrategy (FSY) must be provided.
@@ -7272,16 +7188,16 @@ Ch.3 (material supply), non-essential data element
 DESCRIPTION/PURPOSE
 A code to identify the repair activities to be performed by the Contractor.
 CODE(S)
-MIR = Standard Minor Repair
-MAR = Standard Major Repair
-NSR = Non-Standard Repair
-TIN = Technical Inspection only
-OVH = Overhaul
-SCI = Scrap at Industry
-SCR = Scrap and Return to Customer
-SCL = Repair against Standard Cost Limit
-NCL = Repair against Non-Standard Cost Limit
-EXC = Exchange
+MIR  Standard Minor Repair
+MAR  Standard Major Repair
+NSR  Non-Standard Repair
+TIN  Technical Inspection only
+OVH  Overhaul
+SCI  Scrap at Industry
+SCR  Scrap and Return to Customer
+SCL  Repair against Standard Cost Limit
+NCL  Repair against Non-Standard Cost Limit
+EXC  Exchange
 REMARK(S)
 The above codes may be supplemented by project specific codes agreed between
 Customer and Contractor.
@@ -7324,9 +7240,9 @@ Ch.2 (spare parts list)
 DESCRIPTION/PURPOSE
 Indicates whether an item is considered to be Expendable or Repairable.
 CODE(S)
-1 Expendable; Item typically replaced during the maintenance of the product and not
+1  Expendable; Item typically replaced during the maintenance of the product and not
 economically repairable.
-6 Repairable; Item subject to planned or un-planned maintenance which can be
+6  Repairable; Item subject to planned or un-planned maintenance which can be
 restored to acceptable operating conditions or state after damage or failure.
 REMARK(S)
 The repairabilityStrategy must be provided for all items which have a
@@ -7473,8 +7389,8 @@ DESCRIPTION/PURPOSE
 Indicates whether an item, supplied by the Supplier with the appropriate packaging, must be
 stored under special conditions.
 CODE(S)
-0 No special storage required.
-1 Special storage required (e.g. in an air-conditioned room, refrigerator, etc.).
+0  No special storage required.
+1  Special storage required (e.g. in an air-conditioned room, refrigerator, etc.).
 REMARK(S)
 The specialStorageRequirement must be provided for all items which have a
 figureItemReasonForSelection (RFS) other than 0.
@@ -7559,7 +7475,7 @@ need to transmit the exact measurements of the handling units every time.
 There are no limits to the potential content of a project specific defined SUF, so any
 information can be transmitted if defined before.
 CODE(S)
-0 = non-predefined standard handling unit Format
+0  non-predefined standard handling unit Format
 REMARK(S)
 The use and application of additional codes is to be agreed between the Customer and
 Contractor.
@@ -7646,22 +7562,22 @@ Ch.3 (material supply)
 DESCRIPTION/PURPOSE
 A code to indicate the type of tax and applicability.
 CODE(S)
-000 Zero rated goods (Not taxable) 
-001 Standard VAT rate 
-010 Lower VAT rate 
-011 Higher VAT rate 
-002 Free export, Tax not charged. (Taxable but exempted in accordance with national
+000  Zero rated goods (Not taxable) 
+001  Standard VAT rate 
+010  Lower VAT rate 
+011  Higher VAT rate 
+002  Free export, Tax not charged. (Taxable but exempted in accordance with national
 VAT regulations)
-003 VAT Pre-Funded Offset Against Progress Payments 
-004 VAT Non-Pre-Funded (Calculated Against the Sum of Invoice Order Line Values
+003  VAT Pre-Funded Offset Against Progress Payments 
+004  VAT Non-Pre-Funded (Calculated Against the Sum of Invoice Order Line Values
 Nett)
-005 Exempt from Tax (In accordance with international VAT regulations) 
-006 VAT not due for immediate payment. (Payable with separate VAT Payment
+005  Exempt from Tax (In accordance with international VAT regulations) 
+006  VAT not due for immediate payment. (Payable with separate VAT Payment
 Request)
-007 VAT Pre-Funded Offset Against Progress Payments and not due for immediate
+007  VAT Pre-Funded Offset Against Progress Payments and not due for immediate
 payment. (Payable with separate VAT Payment Request)
-008 VAT only Payable. (Due from a previous Invoice) 
-009 Transferred. (VAT). (VAT not to be paid to the issuer of the Invoice but directly to
+008  VAT only Payable. (Due from a previous Invoice) 
+009  Transferred. (VAT). (VAT not to be paid to the issuer of the Invoice but directly to
 relevant Tax Authority
 REMARK(S)
 --
@@ -7896,16 +7812,16 @@ To define the availability of an item price or repair cost/price value and the t
 value. (UNIT PRICE, ADDITIVE UNIT PRICE, PRICE BREAK DATA, ADJUSTABLE
 COST).
 CODE(S)
-01 - Fixed Definite
-02 - Firm
-03 - Maximum
-04 - Provisional
-05 - Not Available
-06 - Indicative Estimate
-07 - Available on Quotation
-08 - Cost Reimbursement
-09 - Market Price
-10 - Tender Price
+01  Fixed Definite
+02  Firm
+03  Maximum
+04  Provisional
+05  Not Available
+06  Indicative Estimate
+07  Available on Quotation
+08  Cost Reimbursement
+09  Market Price
+10  Tender Price
 FRENCH CODES
 In addition codes FA to FN are permissible in 
 specific to French regulations (refer to GAM-LOG-01A).
@@ -7946,7 +7862,7 @@ CODE(S)
 7  Sale on commission 
 8  Financial compensation 
 9  Services 
-R Repair & Overhaul 
+R  Repair & Overhaul 
 REMARK(S)
 Additional alpha codes may be agreed between Customer and Contractor.
 EXAMPLE(S)
@@ -8572,7 +8488,7 @@ GI  Gallon
 (Imperial)
 Unit of liquid measurement (4,546 litre).
 GL  Gallon (US)  Unit of liquid measurement (3,785 litre).
-GM Gram  A small metric unit of mass.
+GM  Gram  A small metric unit of mass.
 GN  Grain  A small unit of weight (1/480 ounce Troy).
 GP  Group  A collection of related items issued as a single item of supply,
 e.g., test set group. Use only when
@@ -8591,7 +8507,7 @@ HM  Hectometre  One hundred (100) metres.
 HS  Hundred
 Square Feet
 A unit of measure (area).
-HW Hundredweight  A weight equal to one hundred and twelve (112) pounds.
+HW  Hundredweight  A weight equal to one hundred and twelve (112) pounds.
 HY  Hundred Yards  A unit of linear measurement.
 IN  Inch  One twelfth (1/12) of a foot (linear).
 IU  Unit  A standard or basic quantity into which an item of supply is
@@ -8627,9 +8543,9 @@ increments.
 ME  Meal  The measure of food generally taken by an individual at one
 time.
 MF  Thousand Feet  A unit of linear measure.
-MG Milligram  One thousandth part of a gram (0.0154 of a grain).
+MG  Milligram  One thousandth part of a gram (0.0154 of a grain).
 ML  Millilitre  One thousandth part of a litre (0.061 of a cubic inch).
-MM Millimetre  One thousandth part of a metre (0.0394 of an inch)
+MM  Millimetre  One thousandth part of a metre (0.0394 of an inch)
 MN  Square
 Millimetre
 A metric unit of square measure (area).
@@ -8793,7 +8709,7 @@ FZ  Fluid Ounce (Imperial)
 GC  Gill (Imperial) 
 GI  Gallon (Imperial) 
 GL  Gallon (US) (also as UOI) 
-GM Gram (also as UOI) 
+GM  Gram (also as UOI) 
 GN  Grain 
 GP  Group 
 GR  Gross 
@@ -8804,7 +8720,7 @@ HG  Hectogram
 HL  Hundred litres (Hectolitre) 
 HM  Hundred metres (Hectometre) (also as UOI)
 HS  Hundred Square Feet 
-HW Hundred weight 
+HW  Hundred weight 
 HY  Hundred Yards 
 IN  Inch (also as UOI) 
 IU  Unit 
@@ -8819,9 +8735,9 @@ LT  Long Ton (2240 lbs)
 MC  Thousand Cubic Feet 
 ME  Meal 
 MF  Thousand Feet 
-MG Milligram 
+MG  Milligram 
 ML  Millilitre 
-MM Millimetre 
+MM  Millimetre 
 MN  Square Millimetre 
 MR  Metre (also as UOI) 
 MX  Thousand 

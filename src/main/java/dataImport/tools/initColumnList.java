@@ -1,4 +1,4 @@
-package dataImport;
+package dataImport.tools;
 
 import java.util.LinkedList;
 import java.util.Queue;

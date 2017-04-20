@@ -1,37 +1,21 @@
 package dataImport;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
 import static dataImport.dataImportDao.insertDic;
-import static dataImport.dataImportDao.insertXml;
-import static dataImport.dataImportService.handleCode;
-import static dataImport.dataImportService.handleSubElement;
-import static dataImport.dataImportService.handleXml;
+import static dataImport.dataImportService.*;
 
 
 public class getDataFromTxt {
-    private static List<String> tableNameList = new ArrayList<String>();
-    private static Queue<String> columnList = new LinkedList<String>();
 
     public static void main(String[] args) {
 
         getData();
     }
 
-    private static void getEachElement(){
-
-    }
-
-    static  String elementName;
     public static void getData(){
         try {
             StringBuffer sb= new StringBuffer("");
@@ -39,8 +23,6 @@ public class getDataFromTxt {
             FileReader reader = new FileReader("D:\\航空工业\\数据库\\TABLE\\DataDicFinal.txt");
             BufferedReader br = new BufferedReader(reader);
 
-
-            int num =0;
             String exampleNext =br.readLine();
             while(exampleNext != null) {
 
@@ -59,8 +41,7 @@ public class getDataFromTxt {
                         acr = br.readLine();
                         acr = acr.replace("TEI/ACRONYM  ", "");
                     }
-                    num++;
-                    System.out.println(num);
+
                     name = name.replace(" ","");
 //                    System.out.println(current);
 
@@ -77,15 +58,16 @@ public class getDataFromTxt {
                     }
                     handleXml(xmlInfo);
 
-                    //新建子元素表
-                    String subElement = xmlInfo.replace("SUB_DATA_ELEMENTS ","");
+                    //新建subElement表
+                    String subElement = xmlNext.replace("SUB_DATA_ELEMENTS ","");
                     String subElementNext = br.readLine();
 
                     while (!subElementNext.contains("ATTRIBUTE(S)")) {
-                        subElement = subElement +"|"+ subElementNext;
+                        subElement = subElement + subElementNext;
                         subElementNext = br.readLine();
                     }
-                   handleSubElement(subElement);
+                    String newSubElementTable = handleSubElement(name, subElement);
+
 
                     //顺序提取ATTRIBUTE(S)
                     String attribute = subElementNext.replace("ATTRIBUTE(S)  ","");
@@ -107,14 +89,14 @@ public class getDataFromTxt {
                         descriptionNext = br.readLine();
                     }
 
-                    //新建代码表
+                    //新建CODE表
                     String code = br.readLine();
                     String codeNext = br.readLine();
                     while (!codeNext.equals("REMARK(S)")&&!codeNext.equals("REMARK (S)")&&!codeNext.equals("REMARK(s)")) {
-                        code = code +"|"+ codeNext;
+                        code = code +"\n"+ codeNext;
                         codeNext = br.readLine();
                     }
-                    handleCode(code);
+                    String newCodeTableName = handleCode(name, code);
 
                     //顺序提取REMARK
                     String remark = br.readLine();
@@ -132,9 +114,8 @@ public class getDataFromTxt {
                         exampleNext = br.readLine();
                     }
 
-                    insertDic(current, acr, format,attribute,usage,description,remark,example);
-                    System.out.println(name+"|    "+acr+"|    "+ format+"|    "+attribute+"|    "+usage+"|    "+description+"|    "+remark+"|    "+example);
-                    System.out.println();
+                    insertDic(name, acr, format,subElement,attribute,usage,description,code,remark,example);
+//                    System.out.println(name+"|    "+acr+"|    "+ format+"|    "+attribute+"|    "+usage+"|    "+description+"|    "+remark+"|    "+example);
                 }
             }
 
