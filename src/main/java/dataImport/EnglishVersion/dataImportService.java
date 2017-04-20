@@ -1,8 +1,8 @@
-package dataImport;
+package dataImport.EnglishVersion;
 
-import static dataImport.dataImportDao.createNewCode;
-import static dataImport.dataImportDao.createNewSubElement;
-import static dataImport.dataImportDao.insertXml;
+import static dataImport.EnglishVersion.dataImportDao.createNewCode;
+import static dataImport.EnglishVersion.dataImportDao.createNewSubElement;
+import static dataImport.EnglishVersion.dataImportDao.insertXml;
 
 /**
  * Created by ACER on 2017/4/19.

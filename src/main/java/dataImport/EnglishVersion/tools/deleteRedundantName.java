@@ -1,10 +1,8 @@
-package dataImport.tools;
+package dataImport.EnglishVersion.tools;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,23 +10,19 @@ import java.util.List;
 import java.util.Queue;
 
 
-public class testTest {
+public class deleteRedundantName {
     private static List<String> tableNameList = new ArrayList<String>();
     private static Queue<String> columnList = new LinkedList<String>();
 
     public static void main(String[] args) {
 
         getData();
-//        for (String s : tableNameList){
-//            System.out.println(s);
-//        }
     }
 
     private static void getEachElement(){
 
     }
 
-    static  String elementName;
     public static void getData(){
         try {
             StringBuffer sb= new StringBuffer("");
@@ -37,23 +31,25 @@ public class testTest {
             BufferedReader br = new BufferedReader(reader);
 
             String str = null;
-            int count =0;
+
             while((str = br.readLine()) != null) {
 
                 String current = str;
-
-//                if (current.equals("REMARK(S)")||current.equals("REMARK (S)")||current.equals("REMARK(s)")) {
-//                    System.out.println(current);
-//                    count++;
-//                }
-
-                if (current.contains("DATA_ELEMENT_NAME")) {
-                    System.out.println(current);
-                    count++;
-                    System.out.println(count);
+                if (current.contains("DATA_ELEMENT_NAME")){
+                    String next = br.readLine();
+                    String nextNext = br.readLine();
+                    if (next.contains("TEI")||nextNext.contains("TEI")){
+                        System.out.println(current);
+                        System.out.println(next);
+                        System.out.println(nextNext);
+                    }else{
+                        System.out.println(next);
+                        System.out.println(nextNext);
+                    }
+                }else{
+                    System.out.println(str);
                 }
             }
-            System.out.println(count);
 
             br.close();
             reader.close();

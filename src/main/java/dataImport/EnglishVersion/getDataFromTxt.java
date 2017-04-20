@@ -1,12 +1,11 @@
-package dataImport;
+package dataImport.EnglishVersion;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static dataImport.dataImportDao.insertDic;
-import static dataImport.dataImportService.*;
+import static dataImport.EnglishVersion.dataImportDao.insertDic;
 
 
 public class getDataFromTxt {
@@ -56,7 +55,7 @@ public class getDataFromTxt {
                         xmlInfo = xmlInfo + xmlNext+"|";
                         xmlNext = br.readLine();
                     }
-                    handleXml(xmlInfo);
+                    dataImportService.handleXml(xmlInfo);
 
                     //新建subElement表
                     String subElement = xmlNext.replace("SUB_DATA_ELEMENTS ","");
@@ -66,7 +65,7 @@ public class getDataFromTxt {
                         subElement = subElement + subElementNext;
                         subElementNext = br.readLine();
                     }
-                    String newSubElementTable = handleSubElement(name, subElement);
+                    String newSubElementTable = dataImportService.handleSubElement(name, subElement);
 
 
                     //顺序提取ATTRIBUTE(S)
@@ -96,7 +95,7 @@ public class getDataFromTxt {
                         code = code +"\n"+ codeNext;
                         codeNext = br.readLine();
                     }
-                    String newCodeTableName = handleCode(name, code);
+                    String newCodeTableName = dataImportService.handleCode(name, code);
 
                     //顺序提取REMARK
                     String remark = br.readLine();
