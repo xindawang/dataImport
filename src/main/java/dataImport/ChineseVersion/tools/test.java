@@ -44,10 +44,14 @@ public class test {
 //                    count++;
 //                }
 
-                if (current.contains("数据元素名称")&&!current.contains("XML")) {
-                    System.out.println(current);
+                if (current.equals("示例")) {
+                    if (br.readLine().contains("数据字典")){
+                        br.readLine();
+                        System.out.println(br.readLine());
+                    }
+
                     count++;
-                    System.out.println(count);
+//                    System.out.println(count);
                 }
             }
             System.out.println(count);

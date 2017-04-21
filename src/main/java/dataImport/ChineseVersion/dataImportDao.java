@@ -1,4 +1,4 @@
-package dataImport.EnglishVersion;
+package dataImport.ChineseVersion;
 
 /**
  * Created by ACER on 2017/4/19.
@@ -11,7 +11,7 @@ public class dataImportDao {
 
     }
 
-    public static void insertXml(String name,String compound,String type,String minLen,String maxLen,String minVal,String maxVal){
+    public static void insertXml(String compound,String type,String minLen,String maxLen,String minVal,String maxVal){
 
     }
 

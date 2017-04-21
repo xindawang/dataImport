@@ -55,7 +55,7 @@ public class getDataFromTxt {
                         xmlInfo = xmlInfo + xmlNext+"|";
                         xmlNext = br.readLine();
                     }
-                    dataImportService.handleXml(xmlInfo);
+                    dataImportService.handleXml(name,xmlInfo);
 
                     //新建subElement表
                     String subElement = xmlNext.replace("SUB_DATA_ELEMENTS ","");

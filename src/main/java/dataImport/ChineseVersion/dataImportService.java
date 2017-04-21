@@ -1,8 +1,6 @@
-package dataImport.EnglishVersion;
+package dataImport.ChineseVersion;
 
-import static dataImport.EnglishVersion.dataImportDao.createNewCode;
-import static dataImport.EnglishVersion.dataImportDao.createNewSubElement;
-import static dataImport.EnglishVersion.dataImportDao.insertXml;
+import static dataImport.EnglishVersion.dataImportDao.*;
 
 /**
  * Created by ACER on 2017/4/19.
@@ -20,37 +18,42 @@ public class dataImportService {
 
         String info[]= xmlInfo.split("\\|");
         int infoNum = info.length;
-        String compoundAndType = info[1];
+        String compoundAndType = info[0];
         switch (infoNum){
-            case 2:
-                if (compoundAndType.contains("simpleType, basic data type: ")) {
-                    compound = "simpleType, basic data type";
-                    type = compoundAndType.replace("simpleType, basic data type: ", "");
+            case 1:
+                if (compoundAndType.contains("简单")||compoundAndType.contains("普通")) {
+                    compound = "普通类型，基本数据类型";
+                    type = compoundAndType.replaceAll("普通类型，基本数据类型：", "");
+                    type = type.replaceAll(" |\t|　*", "");
                 }
-                if (compoundAndType.contains("compound data element: ")) {
-                    compound = "compound data element";
-                    type = compoundAndType.replace("compound data element: ", "");
+                if (compoundAndType.contains("复合数据元素")) {
+                    compound = "复合数据元素";
+                    type = compoundAndType.replace("复合数据元素", "");
+                    type = type.replaceAll("名称|:|：| |\t|　*", "");
                 }
                 break;
-            case 4:
-                compound = "simpleType, basic data type";
-                type = compoundAndType.replace("simpleType, basic data type: ", "");
-                minLen = info[2].replace("minimum length: ","");
-                maxLen = info[3].replace("maximum length: ","");
+            case 3:
+                compound = "普通类型，基本数据类型";
+                type = compoundAndType.replaceAll("普通类型，基本数据类型：", "");
+                type = type.replaceAll(" |\t|　*", "");
+                minLen = info[1].replace("最小长度：","");
+                maxLen = info[2].replace("最大长度：","");
                 break;
-            case 6:
-                compound = "simpleType, basic data type";
-                type = compoundAndType.replace("simpleType, basic data type: ", "");
-                minLen = info[2].replace("minimum length: ","");
-                maxLen = info[3].replace("maximum length: ","");
-                minVal = info[4].replace("minimum value: ","");
-                maxVal = info[5].replace("maximum value: ","");
+            case 5:
+                compound = "普通类型，基本数据类型";
+                type = compoundAndType.replaceAll("普通类型，基本数据类型：", "");
+                type = type.replaceAll(" |\t|　*", "");
+                minLen = info[1].replace("最小长度：","");
+                maxLen = info[2].replace("最大长度：","");
+                minVal = info[3].replace("最小值：","");
+                maxVal = info[4].replace("最大值：","");
                 break;
             default:
-                System.err.println("xml error!");
+                System.out.println(name);
                 break;
         }
         insertXml(name,compound,type,minLen,maxLen,minVal,maxVal);
+//        System.out.println(compound+"   "+type+"   "+minLen+"   "+maxLen+"   "+minVal+"   "+maxVal);
     }
 
     public static String handleSubElement(String name, String subElement) {
@@ -59,32 +62,33 @@ public class dataImportService {
         String required = null;
         String repeatable = null;
 
-        if (subElement.equals("--")) {
+        if (subElement.contains("--")) {
             return "--";
         } else {
-            String info[] = subElement.split("•  ");
+            String info[] = subElement.split("·");
             int infoNum = info.length;
             for (int i = 0; i < infoNum; i++) {
                 if (!info[i].equals("") && !info[i].equals(" ")) {
-                    String[] sub = info[i].split(",");
+                    String[] sub = info[i].split(",|，");
                     int subNum = sub.length;
                     switch (subNum) {
                         case 1:
-                            subElementName = sub[0];
+                            subElementName = sub[0].replaceAll("\\s","");
                             break;
                         case 2:
-                            subElementName = sub[0];
-                            required = sub[1];
+                            subElementName = sub[0].replaceAll("\\s","");
+                            required = sub[1].replaceAll("\\s","");
                             break;
                         case 3:
-                            subElementName = sub[0];
-                            required = sub[1];
-                            repeatable = sub[2];
+                            subElementName = sub[0].replaceAll("\\s","");
+                            required = sub[1].replaceAll("\\s","");
+                            repeatable = sub[2].replaceAll("\\s","");
                             break;
                         default:
                             System.err.println("subElement error!!");
                     }
 //                    System.out.println(subElementName + " " + required + "    " + repeatable);
+
                     createNewSubElement(name,subElementName,required,repeatable);
                 }
             }
@@ -98,9 +102,12 @@ public class dataImportService {
         String description =null;
         String specification =null;
 
+        System.out.println(code);
         if (code.equals("--")){
+            System.out.println();
             return "--";
         }else if(!code.contains("  ")){
+            System.out.println();
             return code;
         }else{
             String [] info = code.split("\\n");
@@ -115,7 +122,7 @@ public class dataImportService {
                         j--;
                     }
                     if (j>=0){
-                        info[j] = info[j]+" "+info[i];
+                        info[j] = info[j]+info[i];
                         info[i] ="";
                         count--;
                     }
@@ -146,7 +153,7 @@ public class dataImportService {
                             specification = codeInfo[2];
                             break;
                         default:
-                            System.err.println("code error!!");
+//                            System.err.println("code error!!");
                             break;
                     }
                 }
