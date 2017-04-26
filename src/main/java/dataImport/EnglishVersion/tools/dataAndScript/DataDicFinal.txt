@@ -1930,7 +1930,7 @@ REMARK(S)
 --
 EXAMPLE(S)
 - --
-DATA_ELEMENT_NAME  P P rovisioningProjectMessageReference
+DATA_ELEMENT_NAME  ProvisioningProjectMessageReference
 TEI/ACRONYM  DRR
 FORMAT  an9
 XML_DATA_TYPE
@@ -2494,7 +2494,7 @@ See maintenanceSolution (SMR)
 EXAMPLE(S)
 See maintenanceSolution (SMR)
 DATA_ELEMENT_NAME  figureItemSourcingStrategy
-TEI/ACRONYM  FSY Y
+TEI/ACRONYM  FSY
 FORMAT  an2
 XML_DATA_TYPE
 simpleType, basic data type: string
@@ -4446,8 +4446,8 @@ REMARK(S)
 --
 EXAMPLE(S)
 - --
-DATA_ELEMENT_NAME  pr iceCondition
-TEI/ACRONYM  P PC CO O
+DATA_ELEMENT_NAME  priceCondition
+TEI/ACRONYM  PCO
 FORMAT  a an n3 3
 XML_DATA_TYPE
 simpleType, basic data type: string
@@ -7204,7 +7204,7 @@ Customer and Contractor.
 EXAMPLE(S)
 - --
 DATA_ELEMENT_NAME  sparePartsLiatAmendmentNumber
-TEI/ACRONYM  SPA A
+TEI/ACRONYM  SPA
 FORMAT  a an n3 3
 XML_DATA_TYPE
 simpleType, basic data type: string
@@ -7335,7 +7335,7 @@ those items subject to hardwarePartScrapRate.
 EXAMPLE(S)
 - --
 DATA_ELEMENT_NAME  sparePartsListReferenceNumber
-TEI/ACRONYM  S SP PN N
+TEI/ACRONYM  SPN
 FORMAT  an..12
 XML_DATA_TYPE
 simpleType, basic data type: string

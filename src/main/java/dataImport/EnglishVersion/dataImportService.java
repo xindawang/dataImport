@@ -1,8 +1,6 @@
 package dataImport.EnglishVersion;
 
-import static dataImport.EnglishVersion.dataImportDao.createNewCode;
-import static dataImport.EnglishVersion.dataImportDao.createNewSubElement;
-import static dataImport.EnglishVersion.dataImportDao.insertXml;
+import static dataImport.EnglishVersion.dataImportDao.*;
 
 /**
  * Created by ACER on 2017/4/19.
@@ -11,12 +9,12 @@ public class dataImportService {
 
     public static void handleXml(String name, String xmlInfo){
 
-        String type = null;
-        String compound = null;
-        String minLen = null;
-        String maxLen = null;
-        String minVal = null;
-        String maxVal =null;
+        String type = "--";
+        String compound = "--";
+        String minLen;
+        String maxLen;
+        String minVal;
+        String maxVal;
 
         String info[]= xmlInfo.split("\\|");
         int infoNum = info.length;
@@ -31,12 +29,14 @@ public class dataImportService {
                     compound = "compound data element";
                     type = compoundAndType.replace("compound data element: ", "");
                 }
+               insertXml(name,compound,type);
                 break;
             case 4:
                 compound = "simpleType, basic data type";
                 type = compoundAndType.replace("simpleType, basic data type: ", "");
                 minLen = info[2].replace("minimum length: ","");
                 maxLen = info[3].replace("maximum length: ","");
+                insertXml(name,compound,type,Integer.valueOf(minLen),Integer.valueOf(maxLen));
                 break;
             case 6:
                 compound = "simpleType, basic data type";
@@ -45,19 +45,19 @@ public class dataImportService {
                 maxLen = info[3].replace("maximum length: ","");
                 minVal = info[4].replace("minimum value: ","");
                 maxVal = info[5].replace("maximum value: ","");
+                insertXml(name,compound,type,Integer.valueOf(minLen),Integer.valueOf(maxLen),Integer.valueOf(minVal),Integer.valueOf(maxVal));
                 break;
             default:
                 System.err.println("xml error!");
                 break;
         }
-        insertXml(name,compound,type,minLen,maxLen,minVal,maxVal);
     }
 
     public static String handleSubElement(String name, String subElement) {
 
-        String subElementName = null;
-        String required = null;
-        String repeatable = null;
+        String subElementName = "--";
+        String required = "--";
+        String repeatable = "--";
 
         if (subElement.equals("--")) {
             return "--";
@@ -74,29 +74,31 @@ public class dataImportService {
                             break;
                         case 2:
                             subElementName = sub[0];
-                            required = sub[1];
+                            required = sub[1].replace("\\s","");
                             break;
                         case 3:
                             subElementName = sub[0];
-                            required = sub[1];
-                            repeatable = sub[2];
+                            required = sub[1].replace("\\s","");
+                            repeatable = sub[2].replace("repeatable ","");
                             break;
                         default:
                             System.err.println("subElement error!!");
                     }
 //                    System.out.println(subElementName + " " + required + "    " + repeatable);
-                    createNewSubElement(name,subElementName,required,repeatable);
+                    subElementName = subElementName.replace("•","");
+                    subElementName = subElementName.replace("\\s","");
+                    insertSubElement(name,subElementName,required,repeatable);
                 }
             }
-            return name+"SubElement";
+            return "DATA_DIC_ENG_SUB";
         }
     }
 
     public static String handleCode(String name,String code){
 
-        String codeName=null;
-        String description =null;
-        String specification =null;
+        String codeName="--";
+        String description ="--";
+        String specification ="--";
 
         if (code.equals("--")){
             return "--";
@@ -149,11 +151,11 @@ public class dataImportService {
                             System.err.println("code error!!");
                             break;
                     }
+                    insertCode(name,codeName,description,specification);
                 }
             }
 //            System.out.println(name+"   "+codeName+"   "+description+"   "+specification);
-            createNewCode(name,codeName,description,specification);
-            return name +"Code";
+            return "DATA_DIC_ENG_CODE";
         }
 
     }

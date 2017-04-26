@@ -30,7 +30,6 @@ public class getFromTxt {
 
                 String exampleNext =br.readLine();
 
-                int count=1;
                 while(exampleNext != null) {
 
                     String current = exampleNext;
@@ -79,7 +78,7 @@ public class getFromTxt {
                             subElement = subElement + subElementNext;
                             subElementNext = br.readLine();
                         }
-                        String newSubElementTable = dataImportService.handleSubElement(name, subElement);
+                        String subElementTable = dataImportService.handleSubElement(name, subElement);
 
 
                         //顺序提取ATTRIBUTE(S)
@@ -111,7 +110,7 @@ public class getFromTxt {
                             code = code +"\n"+ codeNext;
                             codeNext = br.readLine();
                         }
-                        String newCodeTableName = dataImportService.handleCode(name, code);
+                        String codeTableName = dataImportService.handleCode(name, code);
 
                         //顺序提取REMARK
                         String remark = br.readLine();
@@ -129,7 +128,7 @@ public class getFromTxt {
                             exampleNext = br.readLine();
                         }
 
-                        insertDic(name, acr, format,subElement,attribute,usage,description,code,remark,example);
+                        insertDic(name, acr, format,"DATA_DIC_CHN_XML",subElementTable,attribute,usage,description,codeTableName,remark,example);
 //                      System.out.println(name+"|    "+acr+"|    "+ format+"|    "+subElement+"|    "+attribute+"|    "+usage+"|    "+description+"|    "+code+"|    "+remark+"|    "+example);
                     }
                 }

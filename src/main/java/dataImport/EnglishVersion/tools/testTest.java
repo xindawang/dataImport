@@ -45,7 +45,7 @@ public class testTest {
 //                    count++;
 //                }
 
-                if (current.contains("DATA_ELEMENT_NAME")) {
+                if (current.contains("ATTRIBUTE(S)")) {
                     System.out.println(current);
                     count++;
                     System.out.println(count);

@@ -42,7 +42,7 @@ public class getDataFromTxt {
                     }
 
                     name = name.replace(" ","");
-//                    System.out.println(current);
+//                    System.out.println(name);
 
 
                     //顺序插入format
@@ -65,11 +65,13 @@ public class getDataFromTxt {
                         subElement = subElement + subElementNext;
                         subElementNext = br.readLine();
                     }
-                    String newSubElementTable = dataImportService.handleSubElement(name, subElement);
+                    String subElementTable = dataImportService.handleSubElement(name, subElement);
 
 
                     //顺序提取ATTRIBUTE(S)
                     String attribute = subElementNext.replace("ATTRIBUTE(S)  ","");
+                    attribute = attribute.replace("·","");
+                    attribute = attribute.replace("\\s","");
 
                     //顺序提取USAGE, usage占一行，因此需两次下一行
                     String usageTitle =br.readLine();
@@ -95,7 +97,7 @@ public class getDataFromTxt {
                         code = code +"\n"+ codeNext;
                         codeNext = br.readLine();
                     }
-                    String newCodeTableName = dataImportService.handleCode(name, code);
+                    String codeTableName = dataImportService.handleCode(name, code);
 
                     //顺序提取REMARK
                     String remark = br.readLine();
@@ -113,7 +115,7 @@ public class getDataFromTxt {
                         exampleNext = br.readLine();
                     }
 
-                    insertDic(name, acr, format,subElement,attribute,usage,description,code,remark,example);
+                    insertDic(name, acr, format,"DATA_DIC_ENG_XML",subElementTable,attribute,usage,description, codeTableName,remark,example);
 //                    System.out.println(name+"|    "+acr+"|    "+ format+"|    "+attribute+"|    "+usage+"|    "+description+"|    "+remark+"|    "+example);
                 }
             }

@@ -1,6 +1,6 @@
 package dataImport.ChineseVersion;
 
-import static dataImport.EnglishVersion.dataImportDao.*;
+import static dataImport.ChineseVersion.dataImportDao.*;
 
 /**
  * Created by ACER on 2017/4/19.
@@ -9,12 +9,12 @@ public class dataImportService {
 
     public static void handleXml(String name, String xmlInfo){
 
-        String type = null;
-        String compound = null;
-        String minLen = null;
-        String maxLen = null;
-        String minVal = null;
-        String maxVal =null;
+        String type = "--";
+        String compound = "--";
+        String minLen;
+        String maxLen;
+        String minVal;
+        String maxVal;
 
         String info[]= xmlInfo.split("\\|");
         int infoNum = info.length;
@@ -31,6 +31,7 @@ public class dataImportService {
                     type = compoundAndType.replace("复合数据元素", "");
                     type = type.replaceAll("名称|:|：| |\t|　*", "");
                 }
+                insertXml(name,compound,type);
                 break;
             case 3:
                 compound = "普通类型，基本数据类型";
@@ -38,6 +39,7 @@ public class dataImportService {
                 type = type.replaceAll(" |\t|　*", "");
                 minLen = info[1].replace("最小长度：","");
                 maxLen = info[2].replace("最大长度：","");
+                insertXml(name,compound,type,Integer.valueOf(minLen),Integer.valueOf(maxLen));
                 break;
             case 5:
                 compound = "普通类型，基本数据类型";
@@ -47,20 +49,22 @@ public class dataImportService {
                 maxLen = info[2].replace("最大长度：","");
                 minVal = info[3].replace("最小值：","");
                 maxVal = info[4].replace("最大值：","");
+
+//                System.out.println(name);
+                insertXml(name,compound,type,Integer.valueOf(minLen),Integer.valueOf(maxLen),Integer.valueOf(minVal),Integer.valueOf(maxVal));
                 break;
             default:
                 System.out.println(name);
                 break;
         }
-        insertXml(name,compound,type,minLen,maxLen,minVal,maxVal);
 //        System.out.println(compound+"   "+type+"   "+minLen+"   "+maxLen+"   "+minVal+"   "+maxVal);
     }
 
     public static String handleSubElement(String name, String subElement) {
 
-        String subElementName = null;
-        String required = null;
-        String repeatable = null;
+        String subElementName = "--";
+        String required = "--";
+        String repeatable = "--";
 
         if (subElement.contains("--")) {
             return "--";
@@ -89,25 +93,25 @@ public class dataImportService {
                     }
 //                    System.out.println(subElementName + " " + required + "    " + repeatable);
 
-                    createNewSubElement(name,subElementName,required,repeatable);
+                    insertSubElement(name,subElementName,required,repeatable);
                 }
             }
-            return name+"SubElement";
+            return "DATA_DIC_ENG_SUB";
         }
     }
 
     public static String handleCode(String name,String code){
 
-        String codeName=null;
-        String description =null;
-        String specification =null;
+        String codeName="--";
+        String description ="--";
+        String specification ="--";
 
-        System.out.println(code);
+//        System.out.println(code);
         if (code.equals("--")){
-            System.out.println();
+//            System.out.println();
             return "--";
         }else if(!code.contains("  ")){
-            System.out.println();
+//            System.out.println();
             return code;
         }else{
             String [] info = code.split("\\n");
@@ -156,11 +160,12 @@ public class dataImportService {
 //                            System.err.println("code error!!");
                             break;
                     }
+                    insertCode(name,codeName,description,specification);
                 }
             }
 //            System.out.println(name+"   "+codeName+"   "+description+"   "+specification);
-            createNewCode(name,codeName,description,specification);
-            return name +"Code";
+
+            return "DATA_DIC_ENG_CODE";
         }
 
     }
