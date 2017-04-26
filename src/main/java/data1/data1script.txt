@@ -1,0 +1,23 @@
+﻿CREATE TABLE DATADIC.BUSINESS_RULE
+(
+  ID NUMBER PRIMARY KEY ,
+  TABLE_NAME VARCHAR2(100),
+  DATA_ELEMENT_NAME VARCHAR2(100),
+  TEI_OR_ACRONYM VARCHAR2(5),
+  Draft VARCHAR2(5),
+  Formal VARCHAR2(5),
+  Master VARCHAR2(5),
+  Update_1 VARCHAR2(5),
+  Restate VARCHAR2(5),
+  PartOP_PM VARCHAR2(5),
+  CatalogueOP_PM VARCHAR2(5),
+  PartOP_PUM VARCHAR2(5),
+  CatalogueOP_PUM VARCHAR2(5),
+  Provisioning_Programme_Message VARCHAR2(5),
+  CODREQ VARCHAR2(5),
+  Tailorization_Possible VARCHAR2(5),
+  Applicabillity_Spare VARCHAR2(5),
+  Applicabillity_Non_Spare VARCHAR2(5),
+  Business_Rule VARCHAR2(1000),
+  业务规则 VARCHAR2(1000)
+);

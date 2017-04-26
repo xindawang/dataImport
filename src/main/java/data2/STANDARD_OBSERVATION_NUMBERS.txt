@@ -1,0 +1,96 @@
+﻿001	Format/justification of DE is incorrect	格式/对齐不正确。
+002	DE is incorrect	不正确的DE。
+003	DE is missing	丢失的DE。
+004	DE not required	不需要的DE。
+005	DE correct?	DE是否正确？
+006	Item not in proper sequence	物项顺序有误。
+007	Item to be illustrated	需要图解说明的物项。
+008	Breakdown required	需分解。
+009	Breakdown incomplete	分解不完全。
+010	Breakdown not required	不需分解。
+011	Transmitted parts related data are not supported by a location	传输的零件相关数据无位置信息。
+012	No parts related data available for the transmitted location	传输的位置无零件有关的数据。
+013	Data element change not authorised as category 2 change	数据元素的更改未被授权为2类更改。
+014	OBS not agreed, to be discussed at PAM	未达成一致的OBS,将在PAM上讨论。
+015	OBS on IPL not agreed by Contractor, IPL will not be amended.	关于IPL的OBS没得到合同方的认可，IPL将不修改。
+016	OBS on error agreed	关于错误的OBS得到认同。
+017	Error on IPL agreed, Contractor will correct IPL data.	关于IPL的错误得到认同，合同方将纠正IPL数据。
+018	Request for change agreed	更改请求得到认可。
+019	Request for change in IPL (not an error) agreed, Contractor has incorporated change into IPL.	IPL变更请求（不是错误）得到认可，合同方已把该变化合并到IPL。
+020	Request for change not agreed, to be discussed at PAM	变更请求未认可，将在PAM上讨论。
+021	Request for change in IPL (not an error) not agreed, Contractor will not incorporate change into IPL.	IPL变更请求（不是错误）未认可，合同方将不把该变化合并到IP。
+022	Respond to OBS will be given at PAM	对OBS的回答将在PAM上给出。
+023	Further explanation required	需进一步的解释。
+024	DE correct	正确。
+025	Response to question	对问题的回答。
+026	Observation not actioned, information already conveyed to Customer or previously actioned as part of another Observation	未采取行动的建议，信息已传给客户或作为另一个意见的一部分的以前的行动。
+027	TBF data element not available at this time, Contractor has used a default code as an interim measure i.e. 1 = Considered to be a potential LSI candidate but TBF not known at this time	此时TBF数据元素不可用，合同方使用了一个默认的代码作为临时措施即1=被认为是一个潜在的LSI候选但TBF此时还不知道。
+028	Breakdown reflects the level required to support the Customer's Maintenance Policy.	分解反映需保障客户维护策略的程度。
+029	Data element not available.	数据元素不可用。
+030	RFS = 0, Data element not transmitted.	数据元素没传输。
+031	Request for clarification.	澄清申请。
+032	Data element correct.	数据元素正确。
+033	Query, Query answered.	质疑，质疑已解答。
+034	DFP is incomplete	DFP不完全
+035	Recommendation missing	推荐丢失。
+036	Acceptable as recommended	接受推荐。
+037	Acceptable with alteration: "//**(TEXT) have to be added to SON.	有变动的接受：“//**（文本）应添加到SON。
+038	New presentation required	需新呈现。
+039	Necessary to become a conference agenda item	需成为会议日程物项。
+040	Not acceptable: "//**(TEXT) have to be added to SON.	不接受：“//**（文本）应添加到SON。
+041	Change contained acceptable	含变更的接受
+042	Change contained acceptable subject to the following changes (for detail see Section 1-1c)	含变更的接受限于后续变更（详见第1-1c节）
+043	Updating meeting required (for detail see Section 1-1c)	须召开更新会议（详见第1-1c节）
+300	Title is missing/incorrect/does not agree with text	标题丢失/不正确/与文本不一致
+301	Line weight incorrect	线宽不正确
+302	Line (illustration-, centre-, reference-, projection-) missing/routed incorrectly	线（行）（图解-中心-参考-投影—）丢失/路由不正确
+303	Type size incorrect	类型尺寸不正确
+304	Location drawing missing/incorrect/ inadequate	位置图丢失/不正确/不充分
+305	Direction of view incorrect/missing/ inadequate	视向丢失/不对/不充分
+306	Rotated ...( is incorrect/missing/ inadequate	转动…（不正确/丢失/不充分
+307	Mode of presentation inadequate	呈现模式不充分
+308	Too much detail per page, illustrate on extra page(s)	每页细节太多，在附加页上说明。
+309	Presentation of detail parts incorrect/missing	具体部位呈现不正确/丢失。
+310	How is item attached?	如何附加物项？
+311	Items permanently mounted/welded/ soldered are not to be illustrated separately	永久安装/焊接/钎接的项不再单独图解说明。
+312	Item illustrated but not in text	物项说明了但不是用的文本（物项图解说明了但不是在文本中）。
+313	Item on illustration not/incorrectly indexed	图解但无索引/索引不正确的项。
+314	Item not clearly illustrated	没清楚说明（图解）的项。
+315	OBS on Illustration not agreed by Contractor, Illustration will not be amended.	对图解意见OBS没被合同方认同，图解将不修改。
+316	Error on Illustration agreed, Contractor will correct Illustration.	合同方认同图解错误，将纠正图解。
+317	Request for change in Illustration (not an error) agreed, Contractor has incorporated change into Illustration.	认同图解（不是错误）变更申请，合同方已把变更纳入图解。
+318	Request for change in Illustration (not an error) not agreed, Contractor will not change Illustration.	不认同图解（不是错误）变更申请，合同方将不改图解。
+319	Item not to be illustrated	不作说明（图解）的物项。
+601	CODREQ is incomplete. Missing information is listed in the text. "//**(TEXT) may have to be added to SON.	不完全。丢失的信息在文本中列出。“//**（文本）可能得加到SON。
+602	MFC is invalid.	无效。
+603	MFC has not been assigned.	尚未分配。
+604	PNR not known to manufacturer.	没告知生产商。
+605	The PNR does not allow the item to be identified adequately. An explanation of this fault should be given in the text. "//**(TEXT)" may have to be added to SON.	不允许该物项被充分识别。该错误的解释必须在文本中给出“//**（文本）可能要加到SON中。
+606	Manufacturer does not make any identification documents available.	生产商没提供任何标识文件。
+607	Manufacturer only supplies identification documents against payment. A contractual arrangement for this is requested.	生产商仅付款后提供身份证明文件。这点需作合同安排。
+608	Item no longer manufactured. Identification documents can no longer be obtained from manufacturer.	不再生产的产品，再也不能从生产商处得到身份证明文件。
+609	Item has been replaced by another item. The manufacturer's data for the new item is shown. Please check whether the new item meets your requirements. If so, the new manufacturer's data is to be used to submit a new CODREQ. "//**(TEXT)" may have to be added to SON.	被其他项替代了的项。显示新物项的生产商的数据。请检查新物项是否满足你的需要。如满足，新生产商数据将用来提交一个新的CODREQ。”//**(文本)”可能得加到SON中。
+610	Item is not manufactured in this country. Where known, the correct manufacturer's data or the country of manufacture is entered. "//**(TEXT)" may have to be added to SON.	非本国生产的项。如果知道，输入正确的生产商的数据或生产商的国家。”//**(文本)”可能得加到SON中。
+611	Item is already catalogued under the NSN quoted. You are already registered as an data user agency. The appropriate NSN must be entered. "//**(TEXT)" may have to be added to SON.	物项已归类在列出的NSN下，你已注册为一个数据用户机构。必须输入适合的NSN.”//**(文本)”可能得加到SON中。
+612	Other reasons for "non-cataloguing" of the request are to be given here. The text should be short and easy to understand. "//**(TEXT)" may have to be added to SON.	其他非归类需求原因在这里给出。文本应该简短易于理解。”//**(文本)”可能得加到SON中。
+613	The minimum data (name & NSC) is not sufficient for type 2 codification.	最少的数据（名称&NSC）对类型2编码是不充分的。
+614	Please check and send a new CODREQ with the MFC of the manufacturer who is responsible for the relevant PNR. "//**(TEXT)" may have to be added to SON.	请检查并发出一个新的CODREQ带生产商的MFC，该生产商负责相关的PNR”//**(文本)”可能得加到SON中。
+615	The transmitted NSN & manufacturer's data do not agree with one another. Please check the data and send a new CODREQ with the correct data if codification and/or registration as an authorized data user is required.	传输的NSN&生产商的数据相互矛盾。如果需要编码和/或注册为一个授权的数据用户，请检查数据并发送一个新的CODREQ连同正确数据。
+616	CSN - related CODREQ with PAS/CHS segment.	相关的CODREQ带PAS/CHS分段
+617	PNR - related CODREQ with PAS segment.	PNR-相关的CODREQ带PAS段
+618	Amendment of the codes of the manufacturer's data or deletion of manufacturer's data in a supply item concept.	在供应物项概念中制造商的数据编码的修正或制造商数据的删除。
+619	IPP and DRS have already been transmitted.	IPP及DRS已传输。
+620	SON must be 650, 651 or 652.	必须是650、651或652.
+621	CHG must be N, D or R.	CHG必须是N、D或R.
+622	<not used>	<notused>未被使用
+623	<not used>	<notused>未被使用
+624	<not used>	<notused>未被使用
+625	There are gaps in the sequence of DRS. (Codification will be carried out).	DRS的顺序有间隔（将进行编码）
+626	Where SON 652 and the CHG = N the entry in the NIN is missing.	SON652及CHG=N处，NIN入口丢失。
+627	Submitted NSN,PNR,MFC do not belong to a common NSN concept.	提交的NSN,PNR,MFC不属于一个共同的NSN概念。
+628	Codification is carried out with an amended/ corrected PNR. The PNR is shown in the new format. SON with "//**(TEXT).	SONwith"//**(TEXT).编码是用修正/更正的PNR开展的。PNR以新格式显示。SON及"//**(文本).
+629	Codification is carried out with a newMFC. The new MFC is shown. SON with *//**(TEXT)*.	编码是用新MFC开展的。显示新MFC。SON及*//**(文本)*.
+630	The item is already codified under the next NSN listed. You will be registered as a data user agency. The NSN found by "manual comparison" is shown. SON with "//**(TEXT).	物项已在列出的下一个NSN下编码。你将被注册为数据用户机构。通过“手动比较“发现的”NSN被显示。SON及*//**(文本)。
+631	Where necessary further information is given for the applicant on the processing of the LSA application which is not necessarily clear from the codification data output by computer. SON with "//**(TEXT).	需要的话，进一步的信息提供给申请者，关于LSA应用的处理从计算机输出的编码数据不一定清楚。SON及*//**(TEXT).
+632	Please send identification documents.	请发送身份证明文件
+633	Further Information. Add Text to SON.	进一步信息。加文本到SON。
