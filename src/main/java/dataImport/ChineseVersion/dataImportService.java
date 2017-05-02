@@ -144,7 +144,7 @@ public class dataImportService {
             }
 
             for (int i = 0; i<newInfo.length;i++){
-                if (info[i].contains("  ")){
+                if (newInfo[i].contains("  ")){
                     String [] codeInfo = newInfo[i].split("  ");
                     switch (codeInfo.length){
                         case 2:
