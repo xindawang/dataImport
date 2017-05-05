@@ -96,7 +96,7 @@ public class dataImportService {
                     insertSubElement(name,subElementName,required,repeatable);
                 }
             }
-            return "DATA_DIC_ENG_SUB";
+            return "DATA_DIC_CHN_SUB";
         }
     }
 
